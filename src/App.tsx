@@ -15,9 +15,11 @@ function App() {
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
+
         >
           Learn React
         </a>
+        <span>Api key= AIzaSyBKCfqxBhA6LsLcCxN1hk8nsZqCgHz0lfA</span>
       </header>
     </div>
   );
