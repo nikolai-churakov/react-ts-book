@@ -1,0 +1,17 @@
+.FindPage {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    flex-grow: 1;
+    width: 100%;
+    background: linear-gradient(90deg, #212020 0%, #64646b 100%);
+}
+
+.FindPage h1 {
+    color: #fff;
+    margin-left: 10px;
+}
+
+.FindPage {
+    width: 600px;
+}

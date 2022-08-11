@@ -1,6 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import FindPage from "./containers/FindPage/FindPage";
+
+let test: string = 'test';
+test = 'test2';
 
 function App() {
   return (
@@ -19,7 +22,8 @@ function App() {
         >
           Learn React
         </a>
-        <span>Api key= AIzaSyBKCfqxBhA6LsLcCxN1hk8nsZqCgHz0lfA</span>
+        <span>Api key= 777</span>
+        <FindPage/>
       </header>
     </div>
   );
