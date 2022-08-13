@@ -8,10 +8,31 @@
 }
 
 .FindPage h1 {
+    display: flex;
+    justify-content: center;
     color: #fff;
     margin-left: 10px;
 }
 
-.FindPage {
+.SpanNameInput {
+    color: #fff;
+    margin: 10px;
+}
+
+.SearchDiv {
     width: 600px;
+    height: 300px;
+    background: black;
+
+}
+
+.SortDiv {
+    display: flex;
+}
+
+.inputFind {
+    width: 500px;
+    height: 40px;
+    border-radius: 5px;
+    margin: 10px 30px 10px;
 }

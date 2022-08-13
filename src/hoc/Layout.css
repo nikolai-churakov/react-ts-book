@@ -2,6 +2,5 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background: black;
-    color: rebeccapurple;
+    background: rgba(243, 215, 204, 0.35);
 }
