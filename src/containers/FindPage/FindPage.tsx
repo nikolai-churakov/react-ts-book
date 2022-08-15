@@ -1,14 +1,19 @@
 import React, {Component} from 'react';
 import "./FindPage.css"
 import Select from "../../components/UI/Select/Select";
+import Auxilary from "../../hoc/Auxilary/Auxilary";
 
 class FindPage extends Component {
 
     state = {
-        rightAnswerId: 13,
+        rightAnswerId: "all",
     }
 
-    selectChangeHandler = event => {
+    submitHandler = (event:any) => {
+        event.preventDefault()
+    }
+
+    selectChangeHandler = (event:any) => {
         this.setState({
             rightAnswerId: +event.target.value
         })
@@ -22,17 +27,22 @@ class FindPage extends Component {
                     <h1>Find you books</h1>
 
                     <input className={'inputFind'}/>
+                    <button
+                        // onClick={this.addQuestionHandler}
+                    >
+                        Find
+                    </button>
 
                     <div className={'SortDiv'}>
                         <div>
                             <span className={'SpanNameInput'} >Categories</span>
 
                             const select = <Select
-                            label="Выберите правильный ответ"
+                            label="Выберите тему"
                             value={this.state.rightAnswerId}
-                            // onChange={this.selectChangeHandler}
+                            onChange={this.selectChangeHandler}
                             options={[
-                                {selected, text: 'all', value: 1},
+                                {text: 'all', value: 1},
                                 {text: 'art', value: 2},
                                 {text: 'biography', value: 3},
                                 {text: 'computers', value: 4},
@@ -45,15 +55,16 @@ class FindPage extends Component {
                         <div>
                             <span className={'SpanNameInput'} >Sort by</span>
                             const select2 = <Select
-                            label="Выберите правильный ответ"
+                            label="Сортировка результатов"
                             value={this.state.rightAnswerId}
-                            // onChange={this.selectChangeHandler}
-                            options={["relevance", "newest"]}
+                            onChange={this.selectChangeHandler}
+                            options={[
+                                {text: 'relevance', value: 1},
+                                {text: 'newest', value: 2}
+                            ]}
                         />
-                            <input/>
                         </div>
                     </div>
-
                 </div>
             </div>
         );
