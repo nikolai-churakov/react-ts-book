@@ -1,0 +1,38 @@
+.SearchBooks {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    /*flex-grow: 1;*/
+    box-sizing: border-box;
+}
+
+.SearchDiv {
+    box-sizing: border-box;
+    height: 300px;
+    margin: 0 auto;
+    padding: 0 15px;
+    background: black;
+}
+
+.FindPage h1 {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.SpanNameInput {
+    color: #fff;
+    margin: 10px;
+}
+
+.SortDiv {
+    display: flex;
+}
+
+.inputFind {
+    width: 500px;
+    height: 40px;
+    border-radius: 5px;
+    margin: 10px 30px 10px;
+}

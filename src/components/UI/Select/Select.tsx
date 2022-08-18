@@ -9,7 +9,7 @@ interface SelectProps {
     options: BaseSelect[];
 }
 
-const Select: FC<SelectProps> = ({label, value, onChange, options}) => {
+export const Select: FC<SelectProps> = ({label, value, onChange, options}) => {
     const htmlFor = `${label} - ${Math.random()}`
 
     return (
@@ -35,5 +35,3 @@ const Select: FC<SelectProps> = ({label, value, onChange, options}) => {
         </div>
     )
 }
-
-export default Select
