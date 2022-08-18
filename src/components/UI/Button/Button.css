@@ -1,0 +1,8 @@
+.Button {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: #c4a47e;
+    color: rebeccapurple;
+    border-radius: 5px;
+}

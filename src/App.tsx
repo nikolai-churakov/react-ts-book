@@ -1,17 +1,11 @@
 import React from 'react';
-import Layout from "./hoc/Layout";
-import FindPage from "./containers/FindPage/FindPage";
 
+import {FindPage} from "./pages";
 
-function App() {
-  return (
-
-    <div className="App">
-        <Layout>
+export const App = () => {
+    return (
+        <div className="App">
             <FindPage/>
-        </Layout>
-    </div>
-  );
+        </div>
+    );
 }
-
-export default App;

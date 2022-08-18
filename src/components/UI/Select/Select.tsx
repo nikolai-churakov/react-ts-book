@@ -1,20 +1,26 @@
-import React from "react";
+import React, {FC} from "react";
 import './Select.css'
+import {BaseSelect} from "../../../types";
 
+interface SelectProps {
+    label: string;
+    value: string;
+    onChange: React.ChangeEventHandler<HTMLSelectElement>;
+    options: BaseSelect[];
+}
 
-
-const Select = (props:any) => {
-    const htmlFor = `${props.label} - ${Math.random()}`
+const Select: FC<SelectProps> = ({label, value, onChange, options}) => {
+    const htmlFor = `${label} - ${Math.random()}`
 
     return (
         <div className={'Select'}>
-            <label htmlFor={htmlFor}>{props.label}</label>
+            <label htmlFor={htmlFor}>{label}</label>
             <select
                 id={htmlFor}
-                value={props.value}
-                onChange={props.onChange}
+                value={value}
+                onChange={onChange}
             >
-                { props.options.map((option:any, index:number) => {
+                {options.map((option: any, index: number) => {
                     return (
                         <option
                             value={option.value}
