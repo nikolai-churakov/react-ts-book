@@ -11,7 +11,7 @@ export const Button = (props:any) => {
                 id={htmlFor}
                 onChange={props.onChange}
             >
-                FIND
+               search
             </div>
         </div>
     )

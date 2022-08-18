@@ -34,8 +34,8 @@ const handleButtonClick = useCallback(() => {
 
 return (
     <div className={'SearchBooks'}>
-
         <h1>Find you books</h1>
+
         <div className={'SearchDiv'}>
             <input className={'inputFind'}/>
             <Button onClick={handleButtonClick}>Find</Button>

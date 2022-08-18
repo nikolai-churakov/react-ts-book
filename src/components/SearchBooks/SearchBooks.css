@@ -1,45 +1,45 @@
 .SearchBooks {
-    display: flex;
-    justify-content: center;
-    padding-top: 100px;
-    flex-grow: 1;
-    box-sizing: border-box;
-}
-
-.SearchDiv {
-    box-sizing: border-box;
+    display: block;
     height: 300px;
-    margin: 0 auto;
     padding: 0 15px;
-    background: black;
+    background: rgb(33,33,33);
+    box-sizing: border-box;
 }
 
-@media (max-width: 1200px) {
-    .SearchDiv {
-        max-width: 970px;
-
-    }
-}
-
-@media (max-width: 992px) {
-    .SearchDiv {
-        max-width: none;
-    }
-}
-
-@media (max-width: 767px) {
-    .SearchDiv {
-        max-width: 750px;
-
-    }
-}
-
-.FindPage h1 {
+.SearchBooks h1 {
     display: flex;
     justify-content: center;
     color: #fff;
     margin-left: 10px;
+    box-sizing: border-box;
 }
+.SearchDiv {
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/*@media (max-width: 1200px) {*/
+/*    .SearchDiv {*/
+/*        max-width: 970px;*/
+
+/*    }*/
+/*}*/
+
+/*@media (max-width: 992px) {*/
+/*    .SearchDiv {*/
+/*        max-width: none;*/
+/*    }*/
+/*}*/
+
+/*@media (max-width: 767px) {*/
+/*    .SearchDiv {*/
+/*        max-width: 750px;*/
+
+/*    }*/
+/*}*/
+
+
 
 .SpanNameInput {
     color: #fff;
