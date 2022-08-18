@@ -33,40 +33,35 @@ const handleButtonClick = useCallback(() => {
 }, [selectedTheme, sortedResult])
 
 return (
-
     <div className={'SearchBooks'}>
+
+        <h1>Find you books</h1>
         <div className={'SearchDiv'}>
-            <h1>Find you books</h1>
-
-
             <input className={'inputFind'}/>
-            <Button onClick={handleButtonClick}>
-                Find
-            </Button>
+            <Button onClick={handleButtonClick}>Find</Button>
+        </div>
 
-            <div className={'SortDiv'}>
-                <div>
-                    <span className={'SpanNameInput'}>Categories</span>
-                    <Select
-                        label="Выберите тему"
-                        value={selectedTheme}
-                        onChange={handleSelectThemeChange}
-                        options={themes}
-                    />
-                </div>
-                <div>
-                    <span className={'SpanNameInput'}>Sort by</span>
-                    <Select
-                        label="Сортировка результатов"
-                        value={sortedResult}
-                        onChange={handleSortResultChange}
-                        options={[
-                            {text: 'relevance', value: 'relevance'},
-                            {text: 'newest', value: 'newest'}
-                        ]}
-                    />
-                </div>
-            </div>
+        <div className={'SortDiv'}>
+                <span className={'SpanNameInput'}>Categories</span>
+                <Select
+                    label="Выберите тему"
+                    value={selectedTheme}
+                    onChange={handleSelectThemeChange}
+                    options={themes}
+                />
+        </div>
+
+        <div>
+            <span className={'SpanNameInput'}>Sort by</span>
+            <Select
+                label="Сортировка результатов"
+                value={sortedResult}
+                onChange={handleSortResultChange}
+                options={[
+                    {text: 'relevance', value: 'relevance'},
+                    {text: 'newest', value: 'newest'}
+                ]}
+            />
         </div>
     </div>
 );

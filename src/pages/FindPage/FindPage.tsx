@@ -4,7 +4,10 @@ import {SearchBooks} from "../../components/SearchBooks/SearchBooks";
 
 export const FindPage = () => {
     return (
-        <SearchBooks></SearchBooks>
+        <div className={'FindPage'}>
+            <SearchBooks></SearchBooks>
+        </div>
+
         // <BooksList></BooksList>
     );
 }

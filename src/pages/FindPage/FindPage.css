@@ -1,29 +1,11 @@
 body {
+    margin: 0 auto;
+    background: rgb(34,193,195);
+    background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    background-size: 100%;
 }
 .FindPage {
     display: flex;
     justify-content: center;
-    padding-top: 100px;
-    flex-grow: 1;
-    box-sizing: border-box;
 }
 
-@media (max-width: 1200px) {
-    .SearchDiv {
-        max-width: 970px;
-
-    }
-}
-
-@media (max-width: 992px) {
-    .SearchDiv {
-        max-width: none;
-    }
-}
-
-@media (max-width: 767px) {
-    .SearchDiv {
-        max-width: 750px;
-
-    }
-}

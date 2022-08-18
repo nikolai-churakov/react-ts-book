@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     padding-top: 100px;
-    /*flex-grow: 1;*/
+    flex-grow: 1;
     box-sizing: border-box;
 }
 
@@ -12,6 +12,26 @@
     margin: 0 auto;
     padding: 0 15px;
     background: black;
+}
+
+@media (max-width: 1200px) {
+    .SearchDiv {
+        max-width: 970px;
+
+    }
+}
+
+@media (max-width: 992px) {
+    .SearchDiv {
+        max-width: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .SearchDiv {
+        max-width: 750px;
+
+    }
 }
 
 .FindPage h1 {
