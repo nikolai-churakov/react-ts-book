@@ -1,12 +1,13 @@
 .Button {
-    position: relative;
-    width: 45px;
-    height: 45px;
     background-color: #c4a47e;
     background-image: url("./search-zoom_ico.svg");
-    color: rebeccapurple;
+    position: relative;
+    top: -55px;
+    left: 493px;
+    width: 45px;
+    height: 45px;
     border-radius: 5px;
-    /*position: relative;*/
-    /*top: -55px;*/
-    /*left: 493px;*/
+    border: solid 1px;
+    border-color: #79644d;
+    box-sizing: border-box;
 }

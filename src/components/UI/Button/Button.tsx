@@ -10,9 +10,7 @@ export const Button = (props:any) => {
             <div
                 id={htmlFor}
                 onChange={props.onChange}
-            >
-               search
-            </div>
+            ></div>
         </div>
     )
 }
