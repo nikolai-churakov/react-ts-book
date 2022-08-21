@@ -1,9 +1,12 @@
 .SearchBooks {
-    display: block;
-    height: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     padding: 0 15px;
-    background: rgb(33,33,33);
-    box-sizing: border-box;
+    background: rgba(33, 33, 33, 0.85);
+    /*box-sizing: border-box;*/
+    border-radius: 5px;
+    min-width: 340px;
 }
 
 .SearchBooks h1 {
@@ -14,45 +17,78 @@
     box-sizing: border-box;
 }
 .SearchDiv {
-    display: inline-block;
+    display: flex;
     box-sizing: border-box;
     position: relative;
+    flex: 1 1 auto;
 }
 
-/*@media (max-width: 1200px) {*/
-/*    .SearchDiv {*/
-/*        max-width: 970px;*/
+.SortWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 
-/*    }*/
-/*}*/
-
-/*@media (max-width: 992px) {*/
-/*    .SearchDiv {*/
-/*        max-width: none;*/
-/*    }*/
-/*}*/
-
-/*@media (max-width: 767px) {*/
-/*    .SearchDiv {*/
-/*        max-width: 750px;*/
-
-/*    }*/
-/*}*/
-
+@media (min-width: 0px) and (max-width: 550px) {
+        .SortWrapper {
+            flex-direction: column;
+        }
+    }
 
 
 .SpanNameInput {
-    color: #fff;
+    color: #c4a47e;
     margin: 10px;
 }
 
 .SortDiv {
     display: flex;
+    color: #c4a47e;
+}
+
+.SortDiv span {
+    color: #c4a47e;
 }
 
 .inputFind {
-    width: 500px;
+    width: 100%;
     height: 40px;
     border-radius: 5px;
-    margin: 10px 30px 10px;
+    margin: 10px -43px 10px 0px;
 }
+
+/*@media (min-width: 768px) and (max-width: 2700px) {*/
+/*    .inputFind {*/
+/*        width: 500px;*/
+
+/*    }*/
+/*}*/
+
+/*@media (min-width: 320px) and (max-width: 767px) {*/
+/*    .inputFind {*/
+/*        width: 300px;*/
+/*    }*/
+/*}*/
+
+/*@media (min-width: 0px) and (max-width: 319px) {*/
+/*    .inputFind {*/
+/*        width: 100px;*/
+/*    }*/
+/*}@media (min-width: 768px) and (max-width: 2700px) {*/
+/*    .inputFind {*/
+/*        width: 500px;*/
+
+/*    }*/
+/*}*/
+
+/*@media (min-width: 320px) and (max-width: 767px) {*/
+/*    .inputFind {*/
+/*        width: 300px;*/
+/*    }*/
+/*}*/
+
+/*@media (min-width: 0px) and (max-width: 319px) {*/
+/*    .inputFind {*/
+/*        width: 100px;*/
+/*    }*/
+/*}*/

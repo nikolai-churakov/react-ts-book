@@ -35,13 +35,13 @@ const handleButtonClick = useCallback(() => {
 return (
     <div className={'SearchBooks'}>
         <h1>Find you books</h1>
-
         <div className={'SearchDiv'}>
             <input className={'inputFind'}/>
             <Button onClick={handleButtonClick}>Find</Button>
         </div>
 
-        <div className={'SortDiv'}>
+        <div className={'SortWrapper'}>
+            <div className={'SortDiv'}>
                 <span className={'SpanNameInput'}>Categories</span>
                 <Select
                     label="Выберите тему"
@@ -49,19 +49,21 @@ return (
                     onChange={handleSelectThemeChange}
                     options={themes}
                 />
-        </div>
+            </div>
 
-        <div>
-            <span className={'SpanNameInput'}>Sort by</span>
-            <Select
-                label="Сортировка результатов"
-                value={sortedResult}
-                onChange={handleSortResultChange}
-                options={[
-                    {text: 'relevance', value: 'relevance'},
-                    {text: 'newest', value: 'newest'}
-                ]}
-            />
+            <div className={'SortDiv'}>
+                <span className={'SpanNameInput'}>Sort by</span>
+                <Select
+                    label="Сортировка результатов"
+                    value={sortedResult}
+                    onChange={handleSortResultChange}
+                    options={[
+                        {text: 'relevance', value: 'relevance'},
+                        {text: 'newest', value: 'newest'}
+                    ]}
+                />
+            </div>
+
         </div>
     </div>
 );
