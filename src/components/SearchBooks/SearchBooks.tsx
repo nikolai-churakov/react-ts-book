@@ -6,7 +6,7 @@ import {Select} from "../UI/Select/Select";
 export const SearchBooks = () => {
 
 const [selectedTheme, setSelectedTheme] = useState("all")
-const [sortedResult, setSortedResult] = useState("all")
+const [sortedResult, setSortedResult] = useState("relevance")
 
 const themes = [
     {text: 'all', value: 'all'},
@@ -27,7 +27,8 @@ const handleSortResultChange = useCallback((event: React.ChangeEvent<HTMLSelectE
 }, [])
 
 const handleButtonClick = useCallback(() => {
-    console.log(111)
+    console.log('Clicked')
+    console.log([selectedTheme, setSelectedTheme], [sortedResult, setSortedResult])
     // axios. `qweqweqw ${selectedTheme} qweqeqwe ${sortedResult}`
     // data -> redux state;
 }, [selectedTheme, sortedResult])
@@ -37,7 +38,7 @@ return (
         <h1>Find you books</h1>
         <div className={'SearchDiv'}>
             <input className={'inputFind'}/>
-            <Button onClick={handleButtonClick}>Find</Button>
+            <Button onClick={handleButtonClick}>F</Button>
         </div>
 
         <div className={'SortWrapper'}>
