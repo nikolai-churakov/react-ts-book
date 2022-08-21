@@ -1,0 +1,13 @@
+.Button {
+    display: flex;
+    position: relative;
+    background-color: #c4a47e;
+    background-image: url("./search-zoom_ico.svg");
+    width: 46px;
+    height: 46px;
+    border-radius: 5px;
+    border: solid 1px;
+    border-color: #79644d;
+    box-sizing: border-box;
+    margin: 10px 0px 0px 0px;
+}
