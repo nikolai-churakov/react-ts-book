@@ -36,8 +36,12 @@
     }
 
 .SpanNameInput {
+    display: flex;
+    justify-content: end;
+    align-items: center;
     color: #c4a47e;
     margin: 10px;
+    width: 76px;
 }
 
 .SortDiv {
