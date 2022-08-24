@@ -1,21 +1,29 @@
-import React, {useCallback, useState} from 'react';
+import React, {useCallback, useState, Fragment} from 'react';
 import "./SearchBooks.css"
 import {Input} from "../UI/Input/Input";
 import {Button} from "../UI/Button/Button";
 import {Select} from "../UI/Select/Select";
+import axios from "axios";
 
 export const SearchBooks = () => {
 
-    const [getSearch, setSearch] = useState("Mark Twain")
+    interface iBookList {
+        totalItems: number;
+        volumeInfo: string;
+            title: string;
+            authors: string;
+    }
+    const [books, setBookList] = useState<iBookList[]>([]);
 
+    //
+    // state = {
+    //     books: []
+    // }
+
+
+    const [getSearch, setSearch] = useState("Mark Twain")
     const [selectedTheme, setSelectedTheme] = useState("all")
     const [sortedResult, setSortedResult] = useState("relevance")
-
-    interface InputProps {
-        label: string;
-        value: string;
-        onChange: React.ChangeEvent<HTMLInputElement>;
-    }
 
     const themes = [
         {text: 'all', value: 'all'},
@@ -41,16 +49,40 @@ export const SearchBooks = () => {
         setSortedResult(event.target.value)
     }, [])
 
-    const findRequest = `https://www.googleapis.com/books/v1/volumes?q=+${selectedTheme} +${selectedTheme}+`;
+    const findRequest = `https://www.googleapis.com/books/v1/volumes?q=${getSearch}+${selectedTheme}+${sortedResult}+`;
+
+    const getRequest = () => {
+        axios.get(findRequest)
+        .then((response) => {
+            console.log(1, response.data);
+
+            dispatch(addBooks(response.data))
+            // setBookList(response.data);
+
+            // const books = []
+            // Object.keys(response.data).forEach((key,index) => {
+            //    books.push({
+            //        id: key,
+            //        Name: key
+            //    })
+
+            })
+
+            return setBookList;
+        })
+            .catch(error => console.log('Response server error'))
+    }
 
 
     const handleButtonClick = useCallback(async () => {
         console.log('Clicked')
-        console.log([getSearch, setSearch], [selectedTheme, setSelectedTheme], [sortedResult, setSortedResult])
 
-        // axios. `qweqweqw ${selectedTheme} qweqeqwe ${sortedResult}`
+        // console.log([getSearch, setSearch], [selectedTheme, setSelectedTheme], [sortedResult, setSortedResult])
+        // console.log(`https://www.googleapis.com/books/v1/volumes?q=+${getSearch}+${selectedTheme}+${sortedResult}`)
+        // axios ->
         // data -> redux state;
-        // await getRequest()
+        await getRequest()
+
     }, [getSearch, selectedTheme, sortedResult])
 
     return (
@@ -89,6 +121,8 @@ export const SearchBooks = () => {
                 </div>
 
             </div>
+            <Fragment>
+            </Fragment>
         </div>
     );
 }

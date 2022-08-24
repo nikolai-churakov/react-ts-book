@@ -8,12 +8,10 @@ interface InputProps {
 }
 
 export const Input: FC<InputProps> = ({value, onChange}) =>  {
-    // const inputType = type
     const htmlFor = `${Math.random()}`
 
     return (
             <input className={'InputFind'}
-                // type={inputType}
                 id={htmlFor}
                 value={value}
                 onChange={onChange}
