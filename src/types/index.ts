@@ -5,7 +5,6 @@ export interface BaseSelect {
 
 export interface iBookList {
     totalItems: number;
-    book: number;
     items: VolumeInfo[];
 }
 
@@ -15,13 +14,3 @@ export interface VolumeInfo {
     smallThumbnail: string;
 }
 
-export interface store {
-    totalItems: number;
-    items: [];
-}
-
-export interface items {
-    title: string;
-    authors: string;
-    smallThumbnail: string;
-}
