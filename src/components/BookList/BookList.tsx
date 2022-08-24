@@ -13,7 +13,7 @@ export const BookList: React.FC<iBookList> = (items) => {
     //         <li key={book.id}>
     //             <div>
                     <div
-                        style={{backgroundImage: `url(${book.id.smallThumbnail}`)}}
+                        style={{backgroundImage: `url(${book.id.smallThumbnail})`}}
 
                     />
     //                 <span>{book.title}</span>

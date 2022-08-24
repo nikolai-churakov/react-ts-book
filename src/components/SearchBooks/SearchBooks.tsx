@@ -77,6 +77,19 @@ export const SearchBooks = () => {
 
     }, [getSearch, selectedTheme, sortedResult])
 
+
+    const postReduce =  => {
+        return (dispatch, getState) => {
+            const stateBefore = getState()
+            console.log(`Counter before: ${stateBefore.counter}`)
+            dispatch(incrementByAmount(amount))
+            const stateAfter = getState()
+            console.log(`Counter after: ${stateAfter.counter}`)
+        }
+    }
+
+    store.dispatch(logAndAdd(5))
+
     return (
         <div className={'SearchBooks'}>
             <h1>Find you books</h1>
