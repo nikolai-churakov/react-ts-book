@@ -15,12 +15,6 @@ export const SearchBooks = () => {
     }
     const [books, setBookList] = useState<iBookList[]>([]);
 
-    //
-    // state = {
-    //     books: []
-    // }
-
-
     const [getSearch, setSearch] = useState("Mark Twain")
     const [selectedTheme, setSelectedTheme] = useState("all")
     const [sortedResult, setSortedResult] = useState("relevance")
@@ -56,8 +50,8 @@ export const SearchBooks = () => {
         .then((response) => {
             console.log(1, response.data);
 
-            dispatch(addBooks(response.data))
-            // setBookList(response.data);
+            // dispatch(addBooks(response.data))
+            setBookList(response.data);
 
             // const books = []
             // Object.keys(response.data).forEach((key,index) => {
@@ -65,8 +59,7 @@ export const SearchBooks = () => {
             //        id: key,
             //        Name: key
             //    })
-
-            })
+            // })
 
             return setBookList;
         })
@@ -79,7 +72,6 @@ export const SearchBooks = () => {
 
         // console.log([getSearch, setSearch], [selectedTheme, setSelectedTheme], [sortedResult, setSortedResult])
         // console.log(`https://www.googleapis.com/books/v1/volumes?q=+${getSearch}+${selectedTheme}+${sortedResult}`)
-        // axios ->
         // data -> redux state;
         await getRequest()
 

@@ -6,10 +6,11 @@ export interface BaseSelect {
 export interface iBookList {
     totalItems: number;
     book: number;
+    items: VolumeInfo[];
+}
 
-    items: [];
-        volumeInfo: {};
-            title: string;
-            authors: string;
-            smallThumbnail: string;
+export interface VolumeInfo {
+    title: string;
+    authors: string;
+    smallThumbnail: string;
 }
