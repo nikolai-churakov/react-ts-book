@@ -4,6 +4,9 @@ import {Input} from "../UI/Input/Input";
 import {Button} from "../UI/Button/Button";
 import {Select} from "../UI/Select/Select";
 import axios from "axios";
+import {RootState} from "../../store/store";
+import {useSelector, useDispatch} from 'react-redux'
+import {incrementTotalBooks, incrementByItemsArray} from '../../store/bookSlice'
 
 export const SearchBooks = () => {
 
@@ -13,6 +16,9 @@ export const SearchBooks = () => {
             title: string;
             authors: string;
     }
+
+    const dispatch = useDispatch()
+
     const [books, setBookList] = useState<iBookList[]>([]);
 
     const [getSearch, setSearch] = useState("Mark Twain")
@@ -51,7 +57,9 @@ export const SearchBooks = () => {
             console.log(1, response.data);
 
             // dispatch(addBooks(response.data))
-            setBookList(response.data);
+            setBookList(response.data.tot);
+
+            dispatch(incrementTotalBooks(response.data))
 
             // const books = []
             // Object.keys(response.data).forEach((key,index) => {
@@ -76,19 +84,6 @@ export const SearchBooks = () => {
         await getRequest()
 
     }, [getSearch, selectedTheme, sortedResult])
-
-
-    const postReduce =  => {
-        return (dispatch, getState) => {
-            const stateBefore = getState()
-            console.log(`Counter before: ${stateBefore.counter}`)
-            dispatch(incrementByAmount(amount))
-            const stateAfter = getState()
-            console.log(`Counter after: ${stateAfter.counter}`)
-        }
-    }
-
-    store.dispatch(logAndAdd(5))
 
     return (
         <div className={'SearchBooks'}>
