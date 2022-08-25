@@ -1,10 +1,13 @@
-import React, {useCallback, useState, FC, Fragment} from 'react';
-import {iBookList} from "../../types";
-import {SearchBooks} from "../SearchBooks/SearchBooks";
+import React, { useState } from 'react';
+import { useAppSelector, useAppDispatch } from '../../hook'
+import { incrementTotalBooks, incrementByItemsArray } from '../../store/bookSlice'
 
+export const BookList = () => {
 
-
-export const BookList: React.FC<iBookList> = (items) => {
+    export function Counter() {
+        // The `state` arg is correctly typed as `RootState` already
+        const count = useAppSelector((state) => state.counter.value)
+        const dispatch = useAppDispatch()
 
 
     return (
@@ -14,10 +17,9 @@ export const BookList: React.FC<iBookList> = (items) => {
     //             <div>
                     <div
                         style={{backgroundImage: `url()`}}
-                        BOOKS
-                    />
-    //                 <span>{book.title}</span>
-    //                 <span>{book.authors}</span>
+                    >
+    //                 <span>Название книги</span>
+    //                 <span>Автор</span>
     //
     //             </div>
     //
