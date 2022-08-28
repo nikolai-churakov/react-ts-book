@@ -4,10 +4,10 @@ import { incrementTotalBooks, incrementByItemsArray } from '../../store/bookSlic
 
 export const BookList = () => {
 
-    export function Counter() {
+    // export function Counter() {
         // The `state` arg is correctly typed as `RootState` already
-        const count = useAppSelector((state) => state.counter.value)
-        const dispatch = useAppDispatch()
+        // const count = useAppSelector((state) => state.totalItems)
+        // const dispatch = useAppDispatch()
 
 
     return (
@@ -31,4 +31,5 @@ export const BookList = () => {
 // </div>
 
     );
-};
+}
+// }
