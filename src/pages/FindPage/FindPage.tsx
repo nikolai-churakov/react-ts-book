@@ -1,38 +1,26 @@
 import React from 'react';
 import "./FindPage.css"
 import {SearchBooks} from "../../components/SearchBooks/SearchBooks";
+import {BookList} from "../../components/BookList/BookList";
+
+// import {Pagination} from "../../components/BookList/BookList";
+
 
 export const FindPage = () => {
 
-    // const redux = require('redux')
-    // const initialState = {
-    //     counter: 0
-    // }
-    //
-    // //Reducer
-    // const reducer = (state=initialState, action:any) => {
-    //
-    //     if (action.type === 'ADD') {
-    //         return {
-    //             counter: state.counter + 1
-    //         }
-    //     }
-    //     return state
-    // }
-    //
-    // // Store
-    // const store = redux.createSrote(reducer)
-    //
-    // //Actions
-    // const addCounter = {
-    //     type: 'ADD'
-    // }
-
     return (
-        <div className={'FindPage'}>
-            <SearchBooks></SearchBooks>
-        </div>
+        <div>
+            <div className={'FindPage'}>
+                <SearchBooks/>
+            </div>
 
-        // <BooksList></BooksList>
+            {/*// <div className={'Pagination'}>*/}
+            {/*//     <BooksList/>*/}
+            {/*// </div>*/}
+
+            <div className={'BookList'}>
+                <BookList/>
+            </div>
+        </div>
     );
 }
