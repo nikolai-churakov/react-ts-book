@@ -1,12 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 import {iBookList} from '../types/index'
-import type { RootState } from './store'
 
 // Define the initial state using that type
 const initialState: iBookList = {
-    totalItems: 0,
-    items: []
+    items: [],
+    totalItems: 0
 }
 
 export const counterSlice  = createSlice({
