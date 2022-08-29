@@ -4,22 +4,28 @@ import {Input} from "../UI/Input/Input";
 import {Button} from "../UI/Button/Button";
 import {Select} from "../UI/Select/Select";
 import axios from "axios";
-import {RootState} from "../../store/store";
+import {BookList} from '../../types/index'
+// import {RootState} from "../../store/store";
+
 import {useSelector, useDispatch} from 'react-redux'
-import {incrementTotalBooks, incrementByItemsArray} from '../../store/bookSlice'
+import {addBooksToState} from '../../store/bookSlice'
 
 export const SearchBooks = () => {
 
-    interface iBookList {
-        totalItems: number;
-        volumeInfo: string;
-            title: string;
-            authors: string;
-    }
+
+
+    // console.log('count', count)
+
+    // interface iBookList {
+    //     totalItems: number;
+    //     volumeInfo: [];
+    //         title: string;
+    //         authors: string;
+    // }
 
     const dispatch = useDispatch()
 
-    const [books, setBookList] = useState<iBookList[]>([]);
+    const [books, setBookList] = useState<BookList[]>([]);
 
     const [getSearch, setSearch] = useState("Mark Twain")
     const [selectedTheme, setSelectedTheme] = useState("all")
@@ -54,12 +60,19 @@ export const SearchBooks = () => {
     const getRequest = () => {
         axios.get(findRequest)
         .then((response) => {
-            console.log(1, response.data);
+            const data = response.data;
+            // console.log(1, response.data.items);
+            //
+            // // dispatch(addBooks(response.data))
+            // setBookList(response.data);
 
-            // dispatch(addBooks(response.data))
-            setBookList(response.data.tot);
+            dispatch(addBooksToState({
+                books: data.items,
+                totalBooks: data.totalItems,
+            }));
 
-            dispatch(incrementTotalBooks(response.data))
+
+            // console.log('2 ')
 
             // const books = []
             // Object.keys(response.data).forEach((key,index) => {

@@ -1,27 +1,22 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
-import {iBookList} from '../types/index'
+import {BookList} from '../types/index'
 
-// Define the initial state using that type
-const initialState: iBookList = {
-    items: [],
-    totalItems: 0
+const initialState: BookList = {
+    books: [],
+    totalBooks: 0,
 }
 
-export const counterSlice  = createSlice({
-    name: 'counter',
-    // `createSlice` will infer the state type from the `initialState` argument
+export const bookSlice  = createSlice({
+    name: 'booksAPI',
     initialState,
     reducers: {
-        // Use the PayloadAction type to declare the contents of `action.payload`
-        incrementTotalBooks: (state, action: PayloadAction<number>) => {
-            state.totalItems += action.payload
-        },
-        incrementByItemsArray: (state, action: PayloadAction<number>) => {
-            state.totalItems += action.payload
+        addBooksToState: (state, action: PayloadAction<BookList>) => {
+            state.books = [...action.payload.books];
+            state.totalBooks = action.payload.totalBooks;
         },
     },
 })
-export const { incrementTotalBooks, incrementByItemsArray } = counterSlice.actions
 
-export default counterSlice.reducer
+export const {addBooksToState} = bookSlice.actions
+export const booksReducer =  bookSlice.reducer

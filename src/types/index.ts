@@ -3,12 +3,12 @@ export interface BaseSelect {
     value: string;
 }
 
-export interface iBookList {
-    totalItems: number;
-    items: VolumeInfo[];
+export interface BookList {
+    books: Book[];
+    totalBooks: number;
 }
 
-export interface VolumeInfo {
+export interface Book {
     title: string;
     authors: string;
     smallThumbnail: string;
