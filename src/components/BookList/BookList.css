@@ -17,3 +17,41 @@
     color: white;
     font-size: 18px;
 }
+
+.AllBooks{
+    display: flex;
+    flex-wrap: wrap;
+   max-width: 800px;
+}
+
+
+
+.Book {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    width: 200px;
+    box-sizing: border-box;
+}
+
+.Book span {
+    color: white;
+    font-weight: bold;
+}
+
+.Book span:last-child{
+    color: #c1e77f;
+    font-weight: normal;
+}
+
+.Image {
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
