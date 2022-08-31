@@ -6,7 +6,13 @@ body {
 }
 
 .FindPage {
-    padding: 20px;
+    padding: 20px 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+.ListResult {
+    padding: 2px;
     display: flex;
     justify-content: center;
 }
