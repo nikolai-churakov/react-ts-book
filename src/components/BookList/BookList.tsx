@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "./BookList.css"
 import {useSelector} from "react-redux";
-import { BookList as IBookList} from '../../types'
+import { BookList as IBookList } from '../../types'
 import {RootReducer} from "../../store/rootReducer";
 
 export const BookList = () => {
@@ -9,13 +9,13 @@ export const BookList = () => {
 
     console.log(count)
     console.log(count.books)
-    console.log(count.books[0].volumeInfo)
+    console.log(count.books[0].volumeInfo.title)
 
     if (count.totalBooks === 0) {
         return (
             <div className={'BookList'}>
                 <h1>
-                    Result list
+                    Result listd
                 </h1>
             </div>
         );
@@ -34,8 +34,8 @@ export const BookList = () => {
                      style={{
                          backgroundImage: `url(http://books.google.com/books/content?id=uvNfAAAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api)`
                 }}></div>
-                <span>1</span>
-                <span>2</span>
+                <span>{count.books[0].volumeInfo.authors[0]}</span>
+                <span>{count.books[0].volumeInfo.title}</span>
             </div>
 
             <div className={'Book'}>
