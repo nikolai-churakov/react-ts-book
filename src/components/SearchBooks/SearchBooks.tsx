@@ -117,8 +117,6 @@ export const SearchBooks = () => {
                 </div>
 
             </div>
-            <Fragment>
-            </Fragment>
         </div>
     );
 }

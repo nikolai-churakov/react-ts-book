@@ -6,8 +6,6 @@ export interface BaseSelect {
 export interface BookList {
     books: Book[];
     totalBooks: number;
-    volumeInfo: volumeInfo [];
-    title: string;
 }
 
 export interface Book {

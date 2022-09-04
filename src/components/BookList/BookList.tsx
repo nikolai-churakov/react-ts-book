@@ -9,7 +9,7 @@ export const BookList = () => {
 
     console.log(count)
     console.log(count.books)
-    console.log(count.books[0].volumeInfo.title)
+    // console.log(count.books[0].volumeInfo.title)
 
     if (count.totalBooks === 0) {
         return (
