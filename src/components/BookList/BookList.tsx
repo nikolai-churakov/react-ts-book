@@ -8,7 +8,7 @@ export const BookList = () => {
     const count: IBookList = useSelector((state: RootReducer) => state.booksItems)
 
     console.log(count)
-    console.log(count.books)
+    // console.log(count.books)
     // console.log(count.books[0].volumeInfo.title)
 
     if (count.totalBooks === 0) {
