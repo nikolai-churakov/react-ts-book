@@ -32,28 +32,37 @@ export const BookList = () => {
             <div className={'Book'}>
                 <div className={'Image'}
                      style={{
-                         backgroundImage: `url(http://books.google.com/books/content?id=uvNfAAAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api)`
+                         backgroundImage: `url(${count.books[0].volumeInfo.imageLinks.thumbnail})`
                 }}></div>
                 <span>{count.books[0].volumeInfo.authors[0]}</span>
                 <span>{count.books[0].volumeInfo.title}</span>
             </div>
 
             <div className={'Book'}>
-                <div className={'Image'}></div>
-                <span>Marc Twen</span>
-                <span>Name Book</span>
+                <div className={'Image'}
+                     style={{
+                         backgroundImage: `url(${count.books[1].volumeInfo.imageLinks.thumbnail})`
+                     }}></div>
+                <span>{count.books[1].volumeInfo.authors[0]}</span>
+                <span>{count.books[1].volumeInfo.title}</span>
             </div>
 
             <div className={'Book'}>
-                    <div className={'Image'}></div>
-                    <span>Marc Twen</span>
-                    <span>Name Book</span>
+                <div className={'Image'}
+                     style={{
+                         backgroundImage: `url(${count.books[2].volumeInfo.imageLinks.thumbnail})`
+                     }}></div>
+                <span>{count.books[2].volumeInfo.authors[0]}</span>
+                <span>{count.books[2].volumeInfo.title}</span>
             </div>
 
             <div className={'Book'}>
-                <div className={'Image'}></div>
-                <span>Marc Twen</span>
-                <span>Name Book</span>
+                <div className={'Image'}
+                     style={{
+                         backgroundImage: `url(${count.books[3].volumeInfo.imageLinks.thumbnail})`
+                     }}></div>
+                <span>{count.books[3].volumeInfo.authors[3]}</span>
+                <span>{count.books[3].volumeInfo.title}</span>
             </div>
 
             <div className={'Book'}>

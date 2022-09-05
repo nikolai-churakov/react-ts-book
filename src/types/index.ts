@@ -15,6 +15,9 @@ export interface Book {
 export interface VolumeInfo {
     title: string;
     authors: string[];
-    smallThumbnail: string;
-    Thumbnail: string;
+    imageLinks: ImageLinks
+}
+
+export interface ImageLinks {
+    thumbnail: string;
 }
