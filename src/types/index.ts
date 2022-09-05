@@ -9,16 +9,12 @@ export interface BookList {
 }
 
 export interface Book {
-    volumeInfo: volumeInfo[];
-    title: string;
+    volumeInfo: VolumeInfo;
 }
 
-export interface volumeInfo {
+export interface VolumeInfo {
     title: string;
-    authors: string;
+    authors: string[];
     smallThumbnail: string;
     Thumbnail: string;
 }
-
-
-
