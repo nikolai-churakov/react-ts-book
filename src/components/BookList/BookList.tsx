@@ -7,109 +7,76 @@ import {RootReducer} from "../../store/rootReducer";
 export const BookList = () => {
     const count: IBookList = useSelector((state: RootReducer) => state.booksItems)
 
-    console.log(count)
     console.log(count.books)
-    // console.log(count.books[0].volumeInfo.title)
+    console.log(count.books.length)
 
     if (count.totalBooks === 0) {
         return (
             <div className={'BookList'}>
                 <h1>
-                    Result listd
+                    Result list
                 </h1>
             </div>
         );
     }
 
-    return (
-    <div className={'BookList'}>
-        <h1>
-            Found {count.totalBooks} results
-        </h1>
+    for (let i = 1; i < 3; i++) {
 
-        <div className={'AllBooks'}>
-
-            <div className={'Book'}>
-                <div className={'Image'}
-                     style={{
-                         backgroundImage: `url(${count.books[0].volumeInfo.imageLinks.thumbnail})`
-                }}></div>
-                <span>{count.books[0].volumeInfo.authors[0]}</span>
-                <span>{count.books[0].volumeInfo.title}</span>
+        return (
+            <div className={'BookList'}>
+                <h1> Found {count.totalBooks} results </h1>
+                <div className={'AllBooks'}>
+                    <div className={'Book'}>
+                        <div className={'Image'}
+                             style={{
+                                 backgroundImage: `url(${count.books[i].volumeInfo.imageLinks.thumbnail})`
+                             }}>
+                        </div>
+                        <span>{count.books[i].volumeInfo.authors[0]}</span>
+                        <span>{count.books[i].volumeInfo.title}</span>
+                    </div>
+                </div>
             </div>
-
-            <div className={'Book'}>
-                <div className={'Image'}
-                     style={{
-                         backgroundImage: `url(${count.books[1].volumeInfo.imageLinks.thumbnail})`
-                     }}></div>
-                <span>{count.books[1].volumeInfo.authors[0]}</span>
-                <span>{count.books[1].volumeInfo.title}</span>
-            </div>
-
-            <div className={'Book'}>
-                <div className={'Image'}
-                     style={{
-                         backgroundImage: `url(${count.books[2].volumeInfo.imageLinks.thumbnail})`
-                     }}></div>
-                <span>{count.books[2].volumeInfo.authors[0]}</span>
-                <span>{count.books[2].volumeInfo.title}</span>
-            </div>
-
-            <div className={'Book'}>
-                <div className={'Image'}
-                     style={{
-                         backgroundImage: `url(${count.books[3].volumeInfo.imageLinks.thumbnail})`
-                     }}></div>
-                <span>{count.books[3].volumeInfo.authors[3]}</span>
-                <span>{count.books[3].volumeInfo.title}</span>
-            </div>
-
-            <div className={'Book'}>
-                <div className={'Image'}></div>
-                <span>Marc Twen</span>
-                <span>Name Book</span>
-            </div>
-
-            <div className={'Book'}>
-                <div className={'Image'}></div>
-                <span>Marc Twen</span>
-                <span>Name Book</span>
-            </div>
-
-            <div className={'Book'}>
-                <div className={'Image'}></div>
-                <span>Marc Twen</span>
-                <span>Name Book</span>
-            </div>
-
-            <div className={'Book'}>
-                <div className={'Image'}></div>
-                <span>Marc Twen</span>
-                <span>Name Book</span>
-            </div>
-
-            <div className={'Book'}>
-                <div className={'Image'}></div>
-                <span>Marc Twen</span>
-                <span>Name Book</span>
-            </div>
-
-            <div className={'Book'}>
-                <div className={'Image'}></div>
-                <span>Marc Twen</span>
-                <span>Name Book</span>
-            </div>
-
-            <div className={'Book'}>
-                <div className={'Image'}></div>
-                <span>Marc Twen</span>
-                <span>Name Book</span>
-            </div>
-        </div>
-    </div>
-    );
+        )
+    }
 }
+
+//
+// {/*<div className={'Book'}>*/}
+// {/*    <div className={'Image'}*/}
+// {/*         style={{*/}
+// {/*             backgroundImage: `url(${count.books[0].volumeInfo.imageLinks.thumbnail})`*/}
+// {/*    }}></div>*/}
+// {/*    <span>{count.books[0].volumeInfo.authors[0]}</span>*/}
+// {/*    <span>{count.books[0].volumeInfo.title}</span>*/}
+// {/*</div>*/}
+//
+// {/*<div className={'Book'}>*/}
+// {/*    <div className={'Image'}*/}
+// {/*         style={{*/}
+// {/*             backgroundImage: `url(${count.books[1].volumeInfo.imageLinks.thumbnail})`*/}
+// {/*         }}></div>*/}
+// {/*    <span>{count.books[1].volumeInfo.authors[0]}</span>*/}
+// {/*    <span>{count.books[1].volumeInfo.title}</span>*/}
+// {/*</div>*/}
+//
+// {/*<div className={'Book'}>*/}
+// {/*    <div className={'Image'}*/}
+// {/*         style={{*/}
+// {/*             backgroundImage: `url(${count.books[2].volumeInfo.imageLinks.thumbnail})`*/}
+// {/*         }}></div>*/}
+// {/*    <span>{count.books[2].volumeInfo.authors[0]}</span>*/}
+// {/*    <span>{count.books[2].volumeInfo.title}</span>*/}
+// {/*</div>*/}
+//
+// {/*<div className={'Book'}>*/}
+// {/*    <div className={'Image'}*/}
+// {/*         style={{*/}
+// {/*             backgroundImage: `url(${count.books[3].volumeInfo.imageLinks.thumbnail})`*/}
+// {/*         }}></div>*/}
+// {/*    <span>{count.books[3].volumeInfo.authors[3]}</span>*/}
+// {/*    <span>{count.books[3].volumeInfo.title}</span>*/}
+// {/*</div>*/}
 
 // {/* export function Counter() {*/}
 // {/*        The `state` arg is correctly typed as `RootState` already*/}
