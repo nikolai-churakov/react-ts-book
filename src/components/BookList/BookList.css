@@ -4,7 +4,6 @@
     flex-direction: column;
     padding: 0 15px;
     background: rgba(33, 33, 33, 0.85);
-    /*box-sizing: border-box;*/
     border-radius: 5px;
     min-width: 504px;
 }
@@ -17,11 +16,19 @@
     color: white;
     font-size: 18px;
 }
+.whiteLineHr {
+    height: 3px;
+    background-color: #64646b;
+    max-width: 1120px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
 
 .AllBooks{
     display: flex;
     flex-wrap: wrap;
-   max-width: 1120px;
+    max-width: 1120px;
 }
 
 .Book {
