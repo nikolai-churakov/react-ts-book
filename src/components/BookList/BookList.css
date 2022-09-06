@@ -21,10 +21,8 @@
 .AllBooks{
     display: flex;
     flex-wrap: wrap;
-   max-width: 800px;
+   max-width: 1120px;
 }
-
-
 
 .Book {
     display: flex;
@@ -32,7 +30,28 @@
     justify-content: center;
     justify-items: center;
     width: 200px;
+    height: 420px;
     box-sizing: border-box;
+    margin-left: 20px;
+}
+
+.Image {
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    height: 250px;
+    background-repeat: no-repeat;
+    /*background-size: cover;*/
+    background-position: center;
+    box-sizing: border-box;
+}
+
+.categoriesDiv {
+    color: grey;
+    text-decoration: underline;
+    box-sizing: border-box;
+    max-height: 40px;
+    margin-bottom: 10px;
 }
 
 .Book span {
@@ -45,13 +64,4 @@
     font-weight: normal;
 }
 
-.Image {
-    display: flex;
-    justify-content: center;
-    width: 150px;
-    height: 250px;
-    background-repeat: no-repeat;
-    /*background-size: cover;*/
-    background-position: center;
 
-}
