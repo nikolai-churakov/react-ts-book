@@ -18,7 +18,7 @@ export const FindPage = () => {
             {/*//     <BooksList/>*/}
             {/*// </div>*/}
 
-            <div className={'BookList'}>
+            <div className={'ListResult'}>
                 <BookList/>
             </div>
         </div>

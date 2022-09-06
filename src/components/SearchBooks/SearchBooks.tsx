@@ -5,28 +5,14 @@ import {Button} from "../UI/Button/Button";
 import {Select} from "../UI/Select/Select";
 import axios from "axios";
 import {BookList} from '../../types/index'
-// import {RootState} from "../../store/store";
 
 import {useSelector, useDispatch} from 'react-redux'
 import {addBooksToState} from '../../store/bookSlice'
 
 export const SearchBooks = () => {
 
-
-
-    // console.log('count', count)
-
-    // interface iBookList {
-    //     totalItems: number;
-    //     volumeInfo: [];
-    //         title: string;
-    //         authors: string;
-    // }
-
     const dispatch = useDispatch()
-
     const [books, setBookList] = useState<BookList[]>([]);
-
     const [getSearch, setSearch] = useState("Mark Twain")
     const [selectedTheme, setSelectedTheme] = useState("all")
     const [sortedResult, setSortedResult] = useState("relevance")
@@ -62,8 +48,7 @@ export const SearchBooks = () => {
         .then((response) => {
             const data = response.data;
             // console.log(1, response.data.items);
-            //
-            // // dispatch(addBooks(response.data))
+            // dispatch(addBooks(response.data))
             // setBookList(response.data);
 
             dispatch(addBooksToState({
@@ -71,9 +56,7 @@ export const SearchBooks = () => {
                 totalBooks: data.totalItems,
             }));
 
-
             // console.log('2 ')
-
             // const books = []
             // Object.keys(response.data).forEach((key,index) => {
             //    books.push({
@@ -134,8 +117,6 @@ export const SearchBooks = () => {
                 </div>
 
             </div>
-            <Fragment>
-            </Fragment>
         </div>
     );
 }

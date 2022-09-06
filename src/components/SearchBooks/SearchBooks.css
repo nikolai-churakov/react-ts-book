@@ -4,7 +4,6 @@
     flex-direction: column;
     padding: 0 15px;
     background: rgba(33, 33, 33, 0.85);
-    /*box-sizing: border-box;*/
     border-radius: 5px;
     min-width: 340px;
 }

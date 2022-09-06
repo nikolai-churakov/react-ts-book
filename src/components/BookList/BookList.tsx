@@ -1,46 +1,53 @@
-import React, { useState } from 'react';
-// import { useAppSelector, useAppDispatch } from '../../hook'
-// import { incrementTotalBooks, incrementByItemsArray } from '../../store/bookSlice'
+import React from 'react';
+import "./BookList.css"
 import {useSelector} from "react-redux";
 import { BookList as IBookList } from '../../types'
 import {RootReducer} from "../../store/rootReducer";
 
 export const BookList = () => {
+
     const count: IBookList = useSelector((state: RootReducer) => state.booksItems)
-
-
-    console.log(count)
+    console.log(count.books)
 
     if (count.totalBooks === 0) {
-        return <div>Her</div>
+        return (
+            <div className={'BookList'}>
+                <h1>
+                    Result list
+                </h1>
+            </div>
+        );
     }
 
-    return <div>Hot HER</div>
-    // export function Counter() {
-        // The `state` arg is correctly typed as `RootState` already
-        // const count = useAppSelector((state) => state.totalItems)
-        // const dispatch = useAppDispatch()
+        return (
+            <div className={'BookList'}>
+                <h1> Found {count.totalBooks} results </h1>
+                <div className={'whiteLineHr'}></div>
 
+                <div className={'AllBooks'}>
+                    {count.books.map((book, index) =>
+                        <div key={index} className={'Book'}>
+                            <div className={'Image'}
+                                 style={{
+                                     backgroundImage: `url(${count.books[index].volumeInfo.imageLinks.thumbnail || count.books[index].volumeInfo.imageLinks.smallThumbnail})`
+                                 }}>
+                            </div>
+                            <div className={'categoriesDiv'}>{count.books[index].volumeInfo.categories}</div>
+                            <span>{count.books[index].volumeInfo.authors}</span>
+                            <span>{count.books[index].volumeInfo.title}</span>
+</div>
+                    )}
+                </div>
+            </div>
+        )
+    }
 
-//     return (
-//     // <ul>
-//     //     {handleButtonClick.data.volumeInfo.items.map(book => (
-//     //         <li key={book.id}>
-//     //             <div>
-//                     <div
-//                         style={{backgroundImage: `url()`}}
-//                     >
-//     {/*//                 <span>Название книги</span>*/}
-//     {/*//                 <span>Автор</span>*/}
-//     Not HER
-//     //             </div>
-//     //
-//     //         </li>
-//     //     ))}
-//     // </ul>
-//
-//
-// // </div>
-
-    // );
-}
+// <div className={'Book'}>
+//     <div className={'Image'}
+//          style={{
+//              backgroundImage: `url(${count.books[i].volumeInfo.imageLinks.thumbnail})`
+//          }}>
+//     </div>
+//     <span>{count.books[i].volumeInfo.authors[0]}</span>
+//     <span>{count.books[i].volumeInfo.title}</span>
+// </div>

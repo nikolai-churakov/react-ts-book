@@ -9,8 +9,17 @@ export interface BookList {
 }
 
 export interface Book {
-    title: string;
-    authors: string;
-    smallThumbnail: string;
+    volumeInfo: VolumeInfo;
 }
 
+export interface VolumeInfo {
+    title: string;
+    authors: string[];
+    categories: string[];
+    imageLinks: ImageLinks
+}
+
+export interface ImageLinks {
+    thumbnail: string;
+    smallThumbnail: string;
+}
