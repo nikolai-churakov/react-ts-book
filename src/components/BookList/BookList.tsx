@@ -8,7 +8,6 @@ export const BookList = () => {
 
     const count: IBookList = useSelector((state: RootReducer) => state.booksItems)
     console.log(count.books)
-    console.log(count.books.length)
 
     if (count.totalBooks === 0) {
         return (
@@ -28,10 +27,11 @@ export const BookList = () => {
                         <div key={index} className={'Book'}>
                             <div className={'Image'}
                                  style={{
-                                     backgroundImage: `url(${count.books[index].volumeInfo.imageLinks.thumbnail})`
+                                     backgroundImage: `url(${count.books[index].volumeInfo.imageLinks.thumbnail || count.books[index].volumeInfo.imageLinks.smallThumbnail})`
                                  }}>
                             </div>
-                            <span>{count.books[index].volumeInfo.authors[0]}</span>
+                            <div className={'categoriesDiv'}>{count.books[index].volumeInfo.categories}</div>
+                            <span>{count.books[index].volumeInfo.authors}</span>
                             <span>{count.books[index].volumeInfo.title}</span>
 </div>
                     )}
