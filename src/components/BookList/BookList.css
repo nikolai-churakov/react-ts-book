@@ -5,7 +5,12 @@
     padding: 0 15px;
     background: rgba(33, 33, 33, 0.85);
     border-radius: 5px;
-    min-width: 504px;
+}
+
+@media (min-width: 0px) and (max-width: 500px) {
+    .BookList {
+        max-width: 340px;
+    }
 }
 
 .BookList h1 {
