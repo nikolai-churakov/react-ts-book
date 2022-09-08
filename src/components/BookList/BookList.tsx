@@ -1,13 +1,12 @@
 import React from 'react';
 import "./BookList.css"
 import {useSelector} from "react-redux";
-import { BookList as IBookList } from '../../types'
+import {BookList as IBookList} from '../../types'
 import {RootReducer} from "../../store/rootReducer";
 
 export const BookList = () => {
 
     const count: IBookList = useSelector((state: RootReducer) => state.booksItems)
-    console.log(count.books)
 
     if (count.totalBooks === 0) {
         return (
@@ -41,13 +40,3 @@ export const BookList = () => {
             </div>
         )
     }
-
-// <div className={'Book'}>
-//     <div className={'Image'}
-//          style={{
-//              backgroundImage: `url(${count.books[i].volumeInfo.imageLinks.thumbnail})`
-//          }}>
-//     </div>
-//     <span>{count.books[i].volumeInfo.authors[0]}</span>
-//     <span>{count.books[i].volumeInfo.title}</span>
-// </div>
