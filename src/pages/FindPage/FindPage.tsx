@@ -1,7 +1,8 @@
 import React from 'react';
 import "./FindPage.css"
 import {SearchBooks} from "../../components/SearchBooks/SearchBooks";
-import {BookList} from "../../components/BookList/BookList";
+import { BookList } from "../../components/BookList/BookList";
+
 
 // import {Pagination} from "../../components/BookList/BookList";
 
