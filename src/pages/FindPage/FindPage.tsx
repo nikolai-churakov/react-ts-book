@@ -14,9 +14,6 @@ export const FindPage = () => {
             <div className={'FindPage'}>
                 <SearchBooks/>
             </div>
-            {/*// <div className={'Pagination'}>*/}
-            {/*//     <BooksList/>*/}
-            {/*// </div>*/}
 
             {/*// <div className={'Pagination'}>*/}
             {/*//     <BooksList/>*/}
