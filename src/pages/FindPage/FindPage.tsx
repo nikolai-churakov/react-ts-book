@@ -16,7 +16,9 @@ export const FindPage = () => {
             </div>
 
             {/*// <div className={'Pagination'}>*/}
+
             {/*//     <BooksList/>*/}
+
             {/*// </div>*/}
 
             <div className={'ListResult'}>
