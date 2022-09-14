@@ -13,6 +13,7 @@ export const FindPage = () => {
         <div>
             <div className={'FindPage'}>
                 <SearchBooks/>
+
             </div>
             {/*// <div className={'Pagination'}>*/}
             {/*//     <BooksList/>*/}
