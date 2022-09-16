@@ -9,6 +9,7 @@ import { BookList } from "../../components/BookList/BookList";
 
 export const FindPage = () => {
 
+
     return (
         <div>
             <div className={'FindPage'}>
@@ -16,11 +17,8 @@ export const FindPage = () => {
 
             </div>
             {/*// <div className={'Pagination'}>*/}
-
             {/*//     <BooksList/>*/}
-
             {/*// </div>*/}
-
             <div className={'ListResult'}>
                 <BookList/>
             </div>
