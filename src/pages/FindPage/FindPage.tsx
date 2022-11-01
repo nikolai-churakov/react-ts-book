@@ -1,8 +1,6 @@
 import React from 'react';
 import "./FindPage.css"
-
 import {SearchBooks} from "../../components/SearchBooks/SearchBooks";
-
 import { BookList } from "../../components/BookList/BookList";
 
 
@@ -24,14 +22,9 @@ export const FindPage = () => {
 
             </div>
             {/*// <div className={'Pagination'}>*/}
-
-
-
             {/*//     <BooksList/>*/}
-
-
-
             {/*// </div>*/}
+
             <div className={'ListResult'}>
                 <BookList/>
             </div>
