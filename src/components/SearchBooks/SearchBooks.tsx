@@ -70,12 +70,11 @@ export const SearchBooks = () => {
             .catch(error => console.log('Response server error'))
     }
 
-
     const handleButtonClick = useCallback(async () => {
         console.log('Clicked')
 
-        // console.log([getSearch, setSearch], [selectedTheme, setSelectedTheme], [sortedResult, setSortedResult])
-        // console.log(`https://www.googleapis.com/books/v1/volumes?q=+${getSearch}+${selectedTheme}+${sortedResult}`)
+        console.log([getSearch, setSearch], [selectedTheme, setSelectedTheme], [sortedResult, setSortedResult])
+        console.log(`https://www.googleapis.com/books/v1/volumes?q=+${getSearch}+${selectedTheme}+${sortedResult}`)
         // data -> redux state;
         await getRequest()
 

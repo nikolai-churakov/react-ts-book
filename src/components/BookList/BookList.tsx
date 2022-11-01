@@ -11,9 +11,9 @@ export const BookList = () => {
     if (count.totalBooks === 0) {
         return (
             <div className={'BookList'}>
-                <h1>
-                    Result list
-                </h1>
+                {/*<h1>*/}
+                {/*    Result list*/}
+                {/*</h1>*/}
             </div>
         );
     }
@@ -22,7 +22,6 @@ export const BookList = () => {
             <div className={'BookList'}>
                 <h1> Found {count.totalBooks} results </h1>
                 <div className={'whiteLineHr'}></div>
-
                 <div className={'AllBooks'}>
                     {count.books.map((book, index) =>
                         <div key={index} className={'Book'}>
@@ -34,7 +33,7 @@ export const BookList = () => {
                             <div className={'categoriesDiv'}>{count.books[index].volumeInfo.categories}</div>
                             <span>{count.books[index].volumeInfo.authors}</span>
                             <span>{count.books[index].volumeInfo.title}</span>
-</div>
+                        </div>
                     )}
                 </div>
             </div>
