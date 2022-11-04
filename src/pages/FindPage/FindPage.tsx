@@ -10,6 +10,8 @@ export const FindPage = () => {
     return (
         <div>
             <div className={'FindPage'}>
+
+
                 <SearchBooks/>
             </div>
 

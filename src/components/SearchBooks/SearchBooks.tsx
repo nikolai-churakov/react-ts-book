@@ -47,7 +47,8 @@ export const SearchBooks = () => {
         axios.get(findRequest)
         .then((response) => {
             const data = response.data;
-            // console.log(1, response.data.items);
+            console.log(2, response.data);
+            console.log(1, response.data.items);
             // dispatch(addBooks(response.data))
             // setBookList(response.data);
 
