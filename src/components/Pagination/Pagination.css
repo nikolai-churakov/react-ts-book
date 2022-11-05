@@ -1,0 +1,79 @@
+.BookList {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 15px;
+    background: rgba(33, 33, 33, 0.85);
+    border-radius: 5px;
+}
+
+@media (min-width: 0px) and (max-width: 500px) {
+    .BookList {
+        max-width: 340px;
+    }
+}
+
+.BookList h1 {
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+    box-sizing: border-box;
+    color: white;
+    font-size: 18px;
+}
+.whiteLineHr {
+    height: 3px;
+    background-color: #64646b;
+    max-width: 1120px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.AllBooks{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1120px;
+}
+
+.Book {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    width: 200px;
+    height: 420px;
+    box-sizing: border-box;
+    margin-left: 20px;
+}
+
+.Image {
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    height: 250px;
+    background-repeat: no-repeat;
+    /*background-size: cover;*/
+    background-position: center;
+    box-sizing: border-box;
+}
+
+.categoriesDiv {
+    color: grey;
+    text-decoration: underline;
+    box-sizing: border-box;
+    max-height: 40px;
+    margin-bottom: 10px;
+}
+
+.Book span {
+    color: white;
+    font-weight: bold;
+}
+
+.Book span:last-child{
+    color: #c1e77f;
+    font-weight: normal;
+}
+
+
