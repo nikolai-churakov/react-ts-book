@@ -16,7 +16,7 @@ export const SearchBooks = () => {
     const [getSearch, setSearch] = useState("Mark Twain")
     const [selectedTheme, setSelectedTheme] = useState("all")
     const [sortedResult, setSortedResult] = useState("relevance")
-    const [startIndex, setStartIndex] = useState('&startIndex=10')
+    const [startIndex, setStartIndex] = useState('&startIndex=0')
 
     const themes = [
         {text: 'all', value: 'all'},

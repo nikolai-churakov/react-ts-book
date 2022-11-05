@@ -36,6 +36,10 @@ export const BookList = () => {
                         </div>
                     )}
                 </div>
+
+                <div className={'whiteLineHr'}></div>
+                <h1> Found {count.totalBooks} results </h1>
+
             </div>
         )
     }
