@@ -16,7 +16,7 @@ export const SearchBooks = () => {
     const [getSearch, setSearch] = useState("Mark Twain")
     const [selectedTheme, setSelectedTheme] = useState("all")
     const [sortedResult, setSortedResult] = useState("relevance")
-
+    const [startIndex, setStartIndex] = useState('&startIndex=20')
 
     const themes = [
         {text: 'all', value: 'all'},
@@ -42,14 +42,16 @@ export const SearchBooks = () => {
         setSortedResult(event.target.value)
     }, [])
 
-    const findRequest = `https://www.googleapis.com/books/v1/volumes?q=${getSearch}+${selectedTheme}+${sortedResult}&maxResults=4`;
+    const findRequest = `https://www.googleapis.com/books/v1/volumes?q=${getSearch}+${selectedTheme}+${sortedResult}+${startIndex}`;
 
     const getRequest = () => {
         axios.get(findRequest)
         .then((response) => {
             const data = response.data;
-            console.log(2, response.data);
-            console.log(1, response.data.items);
+
+            console.log(1, response.data);
+            console.log(2, response.data.items);
+            console.log(3, findRequest);
             // dispatch(addBooks(response.data))
             // setBookList(response.data);
 
