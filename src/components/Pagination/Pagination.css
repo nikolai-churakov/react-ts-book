@@ -30,8 +30,16 @@
     box-sizing: border-box;
 }
 
-.pageItem{
-    height: 14px;
-    width: 14px;
-    color: antiquewhite;
+.pagination {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.pageItem {
+    box-sizing: border-box;
+    max-height: 14px;
+    max-width: 14px;
+    background-color: antiquewhite;
 }
