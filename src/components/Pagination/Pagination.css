@@ -3,9 +3,6 @@
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-left: 10px;
-    box-sizing: border-box;
-    padding: 0 15px;
     border-radius: 5px;
     background: rgba(33, 33, 33, 0.85);
 }
@@ -16,17 +13,10 @@
     }
 }
 
-.whiteLineHr {
-    height: 3px;
-    background-color: #64646b;
-    max-width: 1120px;
-    display: flex;
-    justify-content: center;
-    box-sizing: border-box;
-}
-
 .pageItem {
     box-sizing: border-box;
+    margin-left: 20px;
+    margin-top: 20px;
     height: 14px;
     width: 14px;
     background-color: antiquewhite;

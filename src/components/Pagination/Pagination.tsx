@@ -25,7 +25,6 @@ export const Pagination = () => {
     }
 
     return (
-        <div className={'BookList'}>
             <div className={'pagination'}>
                 {
                     pageNumber.map(number => (
@@ -37,7 +36,5 @@ export const Pagination = () => {
                     ))
                 }
             </div>
-
-        </div>
     )
 }
