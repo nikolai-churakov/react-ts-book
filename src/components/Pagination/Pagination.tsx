@@ -29,7 +29,7 @@ export const Pagination = () => {
                 {
                     pageNumber.map(number => (
                         <div className={'pageItem'} key={number}>
-                            <a href={'!!!'} className={'pageItem'}>
+                            <a href={'!!!'} className={'pageLink'}>
                                 {number}
                             </a>
                         </div>

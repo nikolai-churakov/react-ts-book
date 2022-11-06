@@ -14,10 +14,21 @@
 }
 
 .pageItem {
-    box-sizing: border-box;
-    margin-left: 20px;
-    margin-top: 20px;
-    height: 14px;
-    width: 14px;
     background-color: antiquewhite;
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.pageLink {
+    display: flex;
+    justify-content: center;
+    color: black;
+    text-decoration: none;
+    width: 40px;
+    height: 20px;
+
 }
