@@ -16,14 +16,6 @@
     }
 }
 
-.BookList h1 {
-    display: flex;
-    justify-content: center;
-    margin-left: 10px;
-    box-sizing: border-box;
-    color: white;
-    font-size: 18px;
-}
 .whiteLineHr {
     height: 3px;
     background-color: #64646b;
@@ -32,8 +24,6 @@
     justify-content: center;
     box-sizing: border-box;
 }
-
-
 
 .pageItem {
     box-sizing: border-box;
