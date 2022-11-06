@@ -1,10 +1,10 @@
 .pagination {
+    background: rgba(33, 33, 33, 0.85);
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    border-radius: 5px;
-    background: rgba(33, 33, 33, 0.85);
     max-width: 1150px;
+    border-radius: 5px;
 }
 
 @media (min-width: 0px) and (max-width: 500px) {
