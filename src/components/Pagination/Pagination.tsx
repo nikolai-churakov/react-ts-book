@@ -29,11 +29,11 @@ export const Pagination = () => {
             <ul className={'pagination'}>
                 {
                     pageNumber.map(number => (
-                        <li className={'pageItem'} key={number}>
+                        <div className={'pageItem'} key={number}>
                             <a href={'!!!'} className={'pageLink'}>
                                 {number}
                             </a>
-                        </li>
+                        </div>
                     ))
                 }
             </ul>
