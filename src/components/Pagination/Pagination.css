@@ -1,14 +1,17 @@
-.BookList {
+.pagination {
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 10px;
+    box-sizing: border-box;
     padding: 0 15px;
-    background: rgba(33, 33, 33, 0.85);
     border-radius: 5px;
+    background: rgba(33, 33, 33, 0.85);
 }
 
 @media (min-width: 0px) and (max-width: 500px) {
-    .BookList {
+    .pagination {
         max-width: 340px;
     }
 }
@@ -30,16 +33,11 @@
     box-sizing: border-box;
 }
 
-.pagination {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
 
 
 .pageItem {
     box-sizing: border-box;
-    max-height: 14px;
-    max-width: 14px;
+    height: 14px;
+    width: 14px;
     background-color: antiquewhite;
 }
