@@ -16,8 +16,6 @@ export const Pagination = () => {
         pageNumber.push(i)
     }
 
-
-
     if (count.totalBooks === 0) {
         return (
             <div/>
