@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2158899e-7fb6-47b2-8cf7-17be1cd4b682" name="Changes" comment="add new component pag">
-      <change beforePath="$PROJECT_DIR$/src/components/Pagination/Pagination.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pagination/Pagination.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pagination/Pagination.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pagination/Pagination.tsx" afterDir="false" />
+    <list default="true" id="2158899e-7fb6-47b2-8cf7-17be1cd4b682" name="Changes" comment="add new component pag+">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,42 +135,9 @@
       <workItem from="1667284638587" duration="2323000" />
       <workItem from="1667587877372" duration="774000" />
       <workItem from="1667635068883" duration="2312000" />
-      <workItem from="1667637414948" duration="8714000" />
-    </task>
-    <task id="LOCAL-00043" summary="05">
-      <created>1662665254285</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1662665254285</updated>
-    </task>
-    <task id="LOCAL-00044" summary="06">
-      <created>1662665411301</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1662665411301</updated>
-    </task>
-    <task id="LOCAL-00045" summary="add p">
-      <created>1662749993789</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1662749993789</updated>
-    </task>
-    <task id="LOCAL-00046" summary="add p">
-      <created>1662926024325</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1662926024325</updated>
-    </task>
-    <task id="LOCAL-00047" summary="p">
-      <created>1662926066273</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1662926066273</updated>
+      <workItem from="1667637414948" duration="9961000" />
+      <workItem from="1667850589340" duration="45000" />
+      <workItem from="1670053968879" duration="1230000" />
     </task>
     <task id="LOCAL-00048" summary="add component">
       <created>1663013635607</created>
@@ -481,7 +447,42 @@
       <option name="project" value="LOCAL" />
       <updated>1667723934035</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="add new component pag">
+      <created>1667724556102</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1667724556102</updated>
+    </task>
+    <task id="LOCAL-00093" summary="add new component pag">
+      <created>1667725584308</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1667725584308</updated>
+    </task>
+    <task id="LOCAL-00094" summary="add new component pag">
+      <created>1667761278209</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1667761278209</updated>
+    </task>
+    <task id="LOCAL-00095" summary="add new component pag+">
+      <created>1667850598153</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1667850598154</updated>
+    </task>
+    <task id="LOCAL-00096" summary="add new component pag+">
+      <created>1667850623572</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1667850623572</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -499,7 +500,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add style for categories" />
     <MESSAGE value="add whitelineHr" />
     <MESSAGE value="finish BookLis" />
     <MESSAGE value="05" />
@@ -524,6 +524,7 @@
     <MESSAGE value="add pag" />
     <MESSAGE value="add const Result" />
     <MESSAGE value="add new component pag" />
-    <option name="LAST_COMMIT_MESSAGE" value="add new component pag" />
+    <MESSAGE value="add new component pag+" />
+    <option name="LAST_COMMIT_MESSAGE" value="add new component pag+" />
   </component>
 </project>

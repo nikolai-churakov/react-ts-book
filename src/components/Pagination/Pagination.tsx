@@ -9,6 +9,7 @@ export const Pagination = () => {
     const pageNumber = []
 
     const count: IBookList = useSelector((state: RootReducer) => state.booksItems)
+
     const PaginationIndex = Math.ceil(count.totalBooks / 10);
     console.log('total page pagination', PaginationIndex)
 
