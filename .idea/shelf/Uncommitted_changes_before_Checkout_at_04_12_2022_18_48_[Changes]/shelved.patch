@@ -1,0 +1,57 @@
+Index: src/components/SearchBooks/SearchBooks.tsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import React, {useCallback, useState, Fragment} from 'react';\r\nimport \"./SearchBooks.css\"\r\nimport {Input} from \"../UI/Input/Input\";\r\nimport {Button} from \"../UI/Button/Button\";\r\nimport {Select} from \"../UI/Select/Select\";\r\nimport axios from \"axios\";\r\nimport {BookList} from '../../types/index'\r\n\r\nimport {useSelector, useDispatch} from 'react-redux'\r\nimport {addBooksToState} from '../../store/bookSlice'\r\n\r\nexport const SearchBooks = () => {\r\n\r\n    const dispatch = useDispatch()\r\n    const [books, setBookList] = useState<BookList[]>([]);\r\n    const [getSearch, setSearch] = useState(\"Mark Twain\")\r\n    const [selectedTheme, setSelectedTheme] = useState(\"all\")\r\n    const [sortedResult, setSortedResult] = useState(\"relevance\")\r\n\r\n    const themes = [\r\n        {text: 'all', value: 'all'},\r\n        {text: 'art', value: 'art'},\r\n        {text: 'biography', value: 'biography'},\r\n        {text: 'computers', value: 'computers'},\r\n        {text: 'history', value: 'history'},\r\n        {text: 'medical', value: 'medical'},\r\n        {text: 'poetry', value: 'poetry'},\r\n    ]\r\n\r\n    const handleSearch = useCallback((event: any) => {\r\n        console.log(111, event.target.value)\r\n\r\n        setSearch(event.target.value)\r\n    }, [])\r\n\r\n    const handleSelectThemeChange = useCallback((event: React.ChangeEvent<HTMLSelectElement>) => {\r\n        setSelectedTheme(event.target.value)\r\n    }, [])\r\n\r\n    const handleSortResultChange = useCallback((event: React.ChangeEvent<HTMLSelectElement>) => {\r\n        setSortedResult(event.target.value)\r\n    }, [])\r\n\r\n    const findRequest = `https://www.googleapis.com/books/v1/volumes?q=${getSearch}+${selectedTheme}+${sortedResult}+`;\r\n\r\n    const getRequest = () => {\r\n        axios.get(findRequest)\r\n        .then((response) => {\r\n            const data = response.data;\r\n            // console.log(1, response.data.items);\r\n            // dispatch(addBooks(response.data))\r\n            // setBookList(response.data);\r\n\r\n            dispatch(addBooksToState({\r\n                books: data.items,\r\n                totalBooks: data.totalItems,\r\n            }));\r\n\r\n            // console.log('2 ')\r\n            // const books = []\r\n            // Object.keys(response.data).forEach((key,index) => {\r\n            //    books.push({\r\n            //        id: key,\r\n            //        Name: key\r\n            //    })\r\n            // })\r\n\r\n            return setBookList;\r\n        })\r\n            .catch(error => console.log('Response server error'))\r\n    }\r\n\r\n\r\n    const handleButtonClick = useCallback(async () => {\r\n        console.log('Clicked')\r\n\r\n        // console.log([getSearch, setSearch], [selectedTheme, setSelectedTheme], [sortedResult, setSortedResult])\r\n        // console.log(`https://www.googleapis.com/books/v1/volumes?q=+${getSearch}+${selectedTheme}+${sortedResult}`)\r\n        // data -> redux state;\r\n        await getRequest()\r\n\r\n    }, [getSearch, selectedTheme, sortedResult])\r\n\r\n    return (\r\n        <div className={'SearchBooks'}>\r\n            <h1>Find you books</h1>\r\n            <div className={'SearchDiv'}>\r\n                <Input\r\n                    value={getSearch}\r\n                    onChange={handleSearch}\r\n                />\r\n                <Button onClick={handleButtonClick}/>\r\n            </div>\r\n\r\n            <div className={'SortWrapper'}>\r\n                <div className={'SortDiv'}>\r\n                    <span className={'SpanNameInput'}>Categories</span>\r\n                    <Select\r\n                        label=\"Выберите тему\"\r\n                        value={selectedTheme}\r\n                        onChange={handleSelectThemeChange}\r\n                        options={themes}\r\n                    />\r\n                </div>\r\n\r\n                <div className={'SortDiv'}>\r\n                    <span className={'SpanNameInput'}>Sort by</span>\r\n                    <Select\r\n                        label=\"Сортировка результатов\"\r\n                        value={sortedResult}\r\n                        onChange={handleSortResultChange}\r\n                        options={[\r\n                            {text: 'relevance', value: 'relevance'},\r\n                            {text: 'newest', value: 'newest'}\r\n                        ]}\r\n                    />\r\n                </div>\r\n\r\n            </div>\r\n        </div>\r\n    );\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/components/SearchBooks/SearchBooks.tsx b/src/components/SearchBooks/SearchBooks.tsx
+--- a/src/components/SearchBooks/SearchBooks.tsx	(revision 7f644b7825def8d224eaafa6b87dad209fdbbcc0)
++++ b/src/components/SearchBooks/SearchBooks.tsx	(date 1670168886326)
+@@ -16,6 +16,7 @@
+     const [getSearch, setSearch] = useState("Mark Twain")
+     const [selectedTheme, setSelectedTheme] = useState("all")
+     const [sortedResult, setSortedResult] = useState("relevance")
++    const [startIndex, setStartIndex] = useState('&startIndex=0')
+ 
+     const themes = [
+         {text: 'all', value: 'all'},
+@@ -41,13 +42,16 @@
+         setSortedResult(event.target.value)
+     }, [])
+ 
+-    const findRequest = `https://www.googleapis.com/books/v1/volumes?q=${getSearch}+${selectedTheme}+${sortedResult}+`;
++    const findRequest = `https://www.googleapis.com/books/v1/volumes?q=${getSearch}+${selectedTheme}+${sortedResult}${startIndex}`;
+ 
+     const getRequest = () => {
+         axios.get(findRequest)
+         .then((response) => {
+             const data = response.data;
+-            // console.log(1, response.data.items);
++
++            console.log(1, response.data);
++            console.log(2, response.data.items);
++            console.log(3, findRequest);
+             // dispatch(addBooks(response.data))
+             // setBookList(response.data);
+ 
+@@ -70,16 +74,15 @@
+             .catch(error => console.log('Response server error'))
+     }
+ 
+-
+     const handleButtonClick = useCallback(async () => {
+         console.log('Clicked')
+ 
+-        // console.log([getSearch, setSearch], [selectedTheme, setSelectedTheme], [sortedResult, setSortedResult])
+-        // console.log(`https://www.googleapis.com/books/v1/volumes?q=+${getSearch}+${selectedTheme}+${sortedResult}`)
++        console.log([getSearch, setSearch], [selectedTheme, setSelectedTheme], [sortedResult, setSortedResult])
++        console.log(`https://www.googleapis.com/books/v1/volumes?q=+${getSearch}+${selectedTheme}+${sortedResult}`)
+         // data -> redux state;
+         await getRequest()
+ 
+-    }, [getSearch, selectedTheme, sortedResult])
++    }, [getSearch, selectedTheme, sortedResult, startIndex])
+ 
+     return (
+         <div className={'SearchBooks'}>
