@@ -42,7 +42,7 @@ export const SearchBooks = () => {
         setSortedResult(event.target.value)
     }, [])
 
-    const findRequest = `https://www.googleapis.com/books/v1/volumes?q=${getSearch}+${selectedTheme}+${sortedResult}+${startIndex}`;
+    const findRequest = `https://www.googleapis.com/books/v1/volumes?q=${getSearch}+${selectedTheme}+${sortedResult}${startIndex}`;
 
     const getRequest = () => {
         axios.get(findRequest)

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback, useState, Fragment} from 'react';
 import "./Pagination.css"
 import {useSelector} from "react-redux";
 import {BookList as IBookList} from '../../types'
@@ -28,7 +28,7 @@ export const Pagination = () => {
                 {
                     pageNumber.map(number => (
                         <div className={'pageItem'} key={number}>
-                            <a href={'!!!'} className={'pageLink'}>
+                            <a href={`1`} className={'pageLink'}>
                                 {number}
                             </a>
                         </div>
