@@ -16,6 +16,7 @@ export const SearchBooks = () => {
     const [getSearch, setSearch] = useState("Mark Twain")
     const [selectedTheme, setSelectedTheme] = useState("all")
     const [sortedResult, setSortedResult] = useState("relevance")
+    const [startIndex, setStartIndex] = useState("&startIndex=0")
 
     const themes = [
         {text: 'all', value: 'all'},
@@ -41,13 +42,16 @@ export const SearchBooks = () => {
         setSortedResult(event.target.value)
     }, [])
 
-    const findRequest = `https://www.googleapis.com/books/v1/volumes?q=${getSearch}+${selectedTheme}+${sortedResult}+`;
+    const findRequest = `https://www.googleapis.com/books/v1/volumes?q=${getSearch}+${selectedTheme}+${sortedResult}${startIndex}`;
 
     const getRequest = () => {
         axios.get(findRequest)
         .then((response) => {
             const data = response.data;
-            // console.log(1, response.data.items);
+
+            console.log(1, response.data);
+            console.log(2, response.data.items);
+            console.log(3, findRequest);
             // dispatch(addBooks(response.data))
             // setBookList(response.data);
 
@@ -70,16 +74,15 @@ export const SearchBooks = () => {
             .catch(error => console.log('Response server error'))
     }
 
-
     const handleButtonClick = useCallback(async () => {
         console.log('Clicked')
 
-        // console.log([getSearch, setSearch], [selectedTheme, setSelectedTheme], [sortedResult, setSortedResult])
-        // console.log(`https://www.googleapis.com/books/v1/volumes?q=+${getSearch}+${selectedTheme}+${sortedResult}`)
+        console.log([getSearch, setSearch], [selectedTheme, setSelectedTheme], [sortedResult, setSortedResult])
+        console.log(`https://www.googleapis.com/books/v1/volumes?q=+${getSearch}+${selectedTheme}+${sortedResult}`)
         // data -> redux state;
         await getRequest()
 
-    }, [getSearch, selectedTheme, sortedResult])
+    }, [getSearch, selectedTheme, sortedResult, startIndex])
 
     return (
         <div className={'SearchBooks'}>
