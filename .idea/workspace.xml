@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2158899e-7fb6-47b2-8cf7-17be1cd4b682" name="Changes" comment="Math.ceil(count.totalBooks / 20">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pagination/Pagination.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pagination/Pagination.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/SearchBooks/SearchBooks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchBooks/SearchBooks.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -142,21 +141,7 @@
       <workItem from="1670053968879" duration="1230000" />
       <workItem from="1670098004674" duration="735000" />
       <workItem from="1670103743346" duration="594000" />
-      <workItem from="1670141844103" duration="2440000" />
-    </task>
-    <task id="LOCAL-00050" summary="add component 3">
-      <created>1663187522792</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1663187522792</updated>
-    </task>
-    <task id="LOCAL-00051" summary="add component 4">
-      <created>1663188379188</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1663188379188</updated>
+      <workItem from="1670141844103" duration="4884000" />
     </task>
     <task id="LOCAL-00052" summary="add component 4">
       <created>1663613018089</created>
@@ -487,7 +472,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670141956966</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="Math.ceil(count.totalBooks / 20">
+      <created>1670146970781</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1670146970781</updated>
+    </task>
+    <task id="LOCAL-00100" summary="Math.ceil(count.totalBooks / 20">
+      <created>1670147009855</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1670147009855</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
