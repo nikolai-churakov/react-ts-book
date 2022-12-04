@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2158899e-7fb6-47b2-8cf7-17be1cd4b682" name="Changes" comment="add new component pag+">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pagination/Pagination.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pagination/Pagination.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,13 +139,9 @@
       <workItem from="1667637414948" duration="9961000" />
       <workItem from="1667850589340" duration="45000" />
       <workItem from="1670053968879" duration="1230000" />
-    </task>
-    <task id="LOCAL-00048" summary="add component">
-      <created>1663013635607</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1663013635607</updated>
+      <workItem from="1670098004674" duration="735000" />
+      <workItem from="1670103743346" duration="594000" />
+      <workItem from="1670141844103" duration="102000" />
     </task>
     <task id="LOCAL-00049" summary="add component2">
       <created>1663095836871</created>
@@ -482,7 +479,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667850623572</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="add new component pag+">
+      <created>1670098017395</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1670098017395</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
