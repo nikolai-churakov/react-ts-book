@@ -77,7 +77,7 @@ export const SearchBooks = () => {
     const handleButtonClick = useCallback(async () => {
         console.log('Clicked')
 
-        console.log([getSearch, setSearch], [selectedTheme, setSelectedTheme], [sortedResult, setSortedResult])
+        console.log([getSearch, setSearch], [selectedTheme, setSelectedTheme], [sortedResult, setSortedResult],  [startIndex, setStartIndex])
         console.log(`https://www.googleapis.com/books/v1/volumes?q=+${getSearch}+${selectedTheme}+${sortedResult}`)
         // data -> redux state;
         await getRequest()
