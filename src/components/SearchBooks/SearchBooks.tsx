@@ -94,7 +94,6 @@ export const SearchBooks = () => {
                 />
                 <Button onClick={handleButtonClick}/>
             </div>
-
             <div className={'SortWrapper'}>
                 <div className={'SortDiv'}>
                     <span className={'SpanNameInput'}>Categories</span>
@@ -105,7 +104,6 @@ export const SearchBooks = () => {
                         options={themes}
                     />
                 </div>
-
                 <div className={'SortDiv'}>
                     <span className={'SpanNameInput'}>Sort by</span>
                     <Select
@@ -118,7 +116,6 @@ export const SearchBooks = () => {
                         ]}
                     />
                 </div>
-
             </div>
         </div>
     );
