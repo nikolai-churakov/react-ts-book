@@ -30,7 +30,7 @@ export const SearchBooks = () => {
     ]
 
     const handleSearch = useCallback((event: any) => {
-        console.log(111, event.target.value)
+        console.log("handleSearch", event.target.value)
 
         setSearch(event.target.value)
     }, [])
