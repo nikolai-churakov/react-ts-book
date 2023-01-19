@@ -16,6 +16,7 @@ export const SearchBooks = () => {
     const [getSearch, setSearch] = useState("Mark Twain")
     const [selectedTheme, setSelectedTheme] = useState("all")
     const [sortedResult, setSortedResult] = useState("relevance")
+    const [maxResult, setMaxResult] = useState("&maxResults=20")
     const [startIndex, setStartIndex] = useState("&startIndex=0")
 
     const themes = [
@@ -29,7 +30,7 @@ export const SearchBooks = () => {
     ]
 
     const handleSearch = useCallback((event: any) => {
-        console.log(111, event.target.value)
+        console.log("handleSearch", event.target.value)
 
         setSearch(event.target.value)
     }, [])
@@ -42,7 +43,7 @@ export const SearchBooks = () => {
         setSortedResult(event.target.value)
     }, [])
 
-    const findRequest = `https://www.googleapis.com/books/v1/volumes?q=${getSearch}+${selectedTheme}+${sortedResult}${startIndex}`;
+    const findRequest = `https://www.googleapis.com/books/v1/volumes?q=${getSearch}+${selectedTheme}+${sortedResult}${maxResult}${startIndex}`;
 
     const getRequest = () => {
         axios.get(findRequest)
@@ -75,10 +76,9 @@ export const SearchBooks = () => {
     }
 
     const handleButtonClick = useCallback(async () => {
-        console.log('Clicked')
-
-        console.log([getSearch, setSearch], [selectedTheme, setSelectedTheme], [sortedResult, setSortedResult])
-        console.log(`https://www.googleapis.com/books/v1/volumes?q=+${getSearch}+${selectedTheme}+${sortedResult}`)
+        console.log('Clicked!')
+        console.log(findRequest)
+        console.log([getSearch, setSearch], [selectedTheme, setSelectedTheme], [sortedResult, setSortedResult],  [startIndex, setStartIndex])
         // data -> redux state;
         await getRequest()
 
@@ -94,7 +94,6 @@ export const SearchBooks = () => {
                 />
                 <Button onClick={handleButtonClick}/>
             </div>
-
             <div className={'SortWrapper'}>
                 <div className={'SortDiv'}>
                     <span className={'SpanNameInput'}>Categories</span>
@@ -105,7 +104,6 @@ export const SearchBooks = () => {
                         options={themes}
                     />
                 </div>
-
                 <div className={'SortDiv'}>
                     <span className={'SpanNameInput'}>Sort by</span>
                     <Select
@@ -118,7 +116,6 @@ export const SearchBooks = () => {
                         ]}
                     />
                 </div>
-
             </div>
         </div>
     );

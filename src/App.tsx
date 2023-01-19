@@ -6,5 +6,6 @@ export const App = () => {
             <div className="App">
                 <FindPage/>
             </div>
+
     );
 }

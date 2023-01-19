@@ -22,6 +22,7 @@ export const BookList = () => {
             <div className={'BookList'}>
                 <h1> Found {count.totalBooks} results </h1>
                 <div className={'whiteLineHr'}></div>
+
                 <div className={'AllBooks'}>
                     {count.books.map((book, index) =>
                         <div key={index} className={'Book'}>

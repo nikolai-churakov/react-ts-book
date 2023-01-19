@@ -1,15 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="2158899e-7fb6-47b2-8cf7-17be1cd4b682" name="Changes" comment="Merge pull request #6 from nikolai-churakov/77&#10;&#10;77" />
+=======
     <list default="true" id="2158899e-7fb6-47b2-8cf7-17be1cd4b682" name="Changes" comment="Math.ceil(count.totalBooks / 20">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/SearchBooks/SearchBooks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchBooks/SearchBooks.tsx" afterDir="false" />
     </list>
+>>>>>>> origin/master
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Nikolai &lt;94041001+nikolai-churakov@users.noreply.github.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="november_future" />
+=======
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -23,10 +38,20 @@
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
+>>>>>>> origin/master
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/workSpace/react-ts-book/src/components/SearchBooks/SearchBooks.tsx" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2ISHMqjrVEQO84aaHfpkiMF61LD" />
+=======
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -34,6 +59,7 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2DDnoE6RHPBMb6VOmf5672bpwr5" />
+>>>>>>> origin/master
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -46,8 +72,11 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+<<<<<<< HEAD
+=======
     &quot;last_opened_file_path&quot;: &quot;C:/workSpace/react-ts-book/src/pages/FindPage&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+>>>>>>> origin/master
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
@@ -55,6 +84,28 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+<<<<<<< HEAD
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2158899e-7fb6-47b2-8cf7-17be1cd4b682" name="Changes" comment="Math.ceil(count.totalBooks / 20" />
+      <created>1670168020708</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670168020708</updated>
+      <workItem from="1670168023305" duration="139000" />
+      <workItem from="1670168180209" duration="536000" />
+      <workItem from="1670168735251" duration="345000" />
+    </task>
+    <task id="LOCAL-00001" summary="Merge pull request #6 from nikolai-churakov/77&#10;&#10;77">
+      <created>1670168601180</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1670168601180</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+=======
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\workSpace\react-ts-book\src\pages\FindPage" />
@@ -487,6 +538,7 @@
       <updated>1670147009855</updated>
     </task>
     <option name="localTasksCounter" value="101" />
+>>>>>>> origin/master
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -504,6 +556,12 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+<<<<<<< HEAD
+    <MESSAGE value="kill future" />
+    <MESSAGE value="Merge pull request #6 from nikolai-churakov/77&#10;&#10;77" />
+    <MESSAGE value="Revert &quot;Math.ceil(count.totalBooks / 20&quot;&#10;&#10;This reverts commit 11ae38e5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;Math.ceil(count.totalBooks / 20&quot;&#10;&#10;This reverts commit 11ae38e5" />
+=======
     <MESSAGE value="finish BookLis" />
     <MESSAGE value="05" />
     <MESSAGE value="06" />
@@ -530,5 +588,6 @@
     <MESSAGE value="add new component pag+" />
     <MESSAGE value="Math.ceil(count.totalBooks / 20" />
     <option name="LAST_COMMIT_MESSAGE" value="Math.ceil(count.totalBooks / 20" />
+>>>>>>> origin/master
   </component>
 </project>

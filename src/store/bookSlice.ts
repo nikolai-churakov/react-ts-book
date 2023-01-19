@@ -1,6 +1,6 @@
 import {createSlice} from '@reduxjs/toolkit'
 import type {PayloadAction} from '@reduxjs/toolkit'
-import {BookList} from '../types/index'
+import {BookList} from "../types"
 
 const initialState: BookList = {
     books: [],

@@ -1,3 +1,5 @@
+import {useState} from "react";
+
 export interface BaseSelect {
     text: string;
     value: string;
@@ -6,6 +8,13 @@ export interface BaseSelect {
 export interface BookList {
     books: Book[];
     totalBooks: number;
+}
+
+export interface Request {
+    getSearch: string;
+    selectedTheme: string;
+    sortedResult: string;
+    startIndex: 0;
 }
 
 export interface Book {

@@ -1,0 +1,177 @@
+Index: src/components/SearchBooks/SearchBooks.tsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/components/SearchBooks/SearchBooks.tsx b/src/components/SearchBooks/SearchBooks.tsx
+--- a/src/components/SearchBooks/SearchBooks.tsx	
++++ b/src/components/SearchBooks/SearchBooks.tsx	
+@@ -7,16 +7,19 @@
+ import {BookList} from '../../types/index'
+ 
+ import {useSelector, useDispatch} from 'react-redux'
+-import {addBooksToState} from '../../store/bookSlice'
++import {addBooksToState, setQueryParams} from '../../store/bookSlice'
+ 
+ export const SearchBooks = () => {
+-
++    const getSearch = useSelector((state: BookList) => state.getSearch)
++    const selectedTheme = useSelector((state: BookList) => state.selectedTheme)
++    const sortedResult = useSelector((state: BookList) => state.sortedResult)
++    const startIndex = useSelector((state: BookList) => state.startIndex)
+     const dispatch = useDispatch()
+     const [books, setBookList] = useState<BookList[]>([]);
+-    const [getSearch, setSearch] = useState("Mark Twain")
+-    const [selectedTheme, setSelectedTheme] = useState("all")
+-    const [sortedResult, setSortedResult] = useState("relevance")
+-    const [startIndex, setStartIndex] = useState("&startIndex=0")
++    // const [getSearch, setSearch] = useState("Mark Twain")
++    // const [selectedTheme, setSelectedTheme] = useState("all")
++    // const [sortedResult, setSortedResult] = useState("relevance")
++    // const [startIndex, setStartIndex] = useState("&startIndex=0")
+ 
+     const themes = [
+         {text: 'all', value: 'all'},
+@@ -31,16 +34,34 @@
+     const handleSearch = useCallback((event: any) => {
+         console.log(111, event.target.value)
+ 
+-        setSearch(event.target.value)
+-    }, [])
++        // setSearch(event.target.value)
++        dispatch(setQueryParams({
++            getSearch: event.target.value,
++            selectedTheme,
++            sortedResult,
++            startIndex
++        }))
++    }, [dispatch, selectedTheme, sortedResult, startIndex])
+ 
+     const handleSelectThemeChange = useCallback((event: React.ChangeEvent<HTMLSelectElement>) => {
+-        setSelectedTheme(event.target.value)
+-    }, [])
++        // setSelectedTheme(event.target.value)
++        dispatch(setQueryParams({
++            getSearch,
++            selectedTheme: event.target.value,
++            sortedResult,
++            startIndex
++        }))
++    }, [dispatch, getSearch, sortedResult, startIndex])
+ 
+     const handleSortResultChange = useCallback((event: React.ChangeEvent<HTMLSelectElement>) => {
+-        setSortedResult(event.target.value)
+-    }, [])
++        // setSortedResult(event.target.value)
++        dispatch(setQueryParams({
++            getSearch,
++            selectedTheme,
++            sortedResult: event.target.value,
++            startIndex
++        }))
++    }, [dispatch, getSearch, selectedTheme, startIndex])
+ 
+     const findRequest = `https://www.googleapis.com/books/v1/volumes?q=${getSearch}+${selectedTheme}+${sortedResult}${startIndex}`;
+ 
+@@ -75,15 +96,16 @@
+     }
+ 
+     const handleButtonClick = useCallback(async () => {
+-        console.log('Clicked')
+-
+-        console.log([getSearch, setSearch], [selectedTheme, setSelectedTheme], [sortedResult, setSortedResult])
+-        console.log(`https://www.googleapis.com/books/v1/volumes?q=+${getSearch}+${selectedTheme}+${sortedResult}`)
++        // console.log('Clicked')
++        //
++        // console.log([getSearch, setSearch], [selectedTheme, setSelectedTheme], [sortedResult, setSortedResult])
++        // console.log(`https://www.googleapis.com/books/v1/volumes?q=+${getSearch}+${selectedTheme}+${sortedResult}`)
+         // data -> redux state;
+         await getRequest()
+ 
+     }, [getSearch, selectedTheme, sortedResult, startIndex])
+ 
++    console.log(getSearch, selectedTheme, sortedResult, startIndex)
+     return (
+         <div className={'SearchBooks'}>
+             <h1>Find you books</h1>
+Index: src/components/Pagination/Pagination.tsx
+===================================================================
+diff --git a/src/components/Pagination/Pagination.tsx b/src/components/Pagination/Pagination.tsx
+--- a/src/components/Pagination/Pagination.tsx	
++++ b/src/components/Pagination/Pagination.tsx	
+@@ -11,6 +11,12 @@
+     const count: IBookList = useSelector((state: RootReducer) => state.booksItems)
+ 
+     const PaginationIndex = Math.ceil(count.totalBooks / 20);
++
++    const handleButtonClick = useCallback(()=> {
++
++    }, [])
++
++
+     console.log('total page pagination', PaginationIndex)
+ 
+     for (let i= 1; i <= PaginationIndex; i++) {
+@@ -27,10 +33,10 @@
+             <div className={'pagination'}>
+                 {
+                     pageNumber.map(number => (
+-                        <div className={'pageItem'} key={number}>
+-                            <a href={`1`} className={'pageLink'}>
+-                                {number}
+-                            </a>
++                        <div onClick={handleButtonClick} className={'pageItem'} key={number}>
++                            {/*<a href={`1`} className={'pageLink'}>*/}
++                            {number}
++                            {/*</a>*/}
+                         </div>
+                     ))
+                 }
+Index: .idea/workspace.xml
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -3,7 +3,10 @@
+   <component name="ChangeListManager">
+     <list default="true" id="2158899e-7fb6-47b2-8cf7-17be1cd4b682" name="Changes" comment="Math.ceil(count.totalBooks / 20">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/components/Pagination/Pagination.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pagination/Pagination.tsx" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/components/SearchBooks/SearchBooks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchBooks/SearchBooks.tsx" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/store/bookSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/bookSlice.ts" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/index.ts" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -141,14 +144,7 @@
+       <workItem from="1670053968879" duration="1230000" />
+       <workItem from="1670098004674" duration="735000" />
+       <workItem from="1670103743346" duration="594000" />
+-      <workItem from="1670141844103" duration="4884000" />
+-    </task>
+-    <task id="LOCAL-00052" summary="add component 4">
+-      <created>1663613018089</created>
+-      <option name="number" value="00052" />
+-      <option name="presentableId" value="LOCAL-00052" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1663613018089</updated>
++      <workItem from="1670141844103" duration="9538000" />
+     </task>
+     <task id="LOCAL-00053" summary="add component 4">
+       <created>1663613026124</created>
+@@ -486,7 +482,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1670147009855</updated>
+     </task>
+-    <option name="localTasksCounter" value="101" />
++    <task id="LOCAL-00101" summary="Math.ceil(count.totalBooks / 20">
++      <created>1670157511174</created>
++      <option name="number" value="00101" />
++      <option name="presentableId" value="LOCAL-00101" />
++      <option name="project" value="LOCAL" />
++      <updated>1670157511174</updated>
++    </task>
++    <option name="localTasksCounter" value="102" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
