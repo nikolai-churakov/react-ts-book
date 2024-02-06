@@ -6,17 +6,17 @@ import {Pagination} from "../../components/Pagination/Pagination";
 
 export const FindPage = () => {
 
-    return (
-        <div>
-            <div className={'FindPage'}>
-                <SearchBooks/>
-            </div>
-            <div className={'ListResult'}>
-                <BookList/>
-            </div>
-            <div className={'Pagination'}>
-                 <Pagination/>
-             </div>
-        </div>
-    );
+  return (
+    <div>
+      <div className={'FindPage'}>
+        <SearchBooks/>
+      </div>
+      <div className={'ListResult'}>
+        <BookList/>
+      </div>
+      <div className={'Pagination'}>
+        <Pagination/>
+      </div>
+    </div>
+  );
 }
