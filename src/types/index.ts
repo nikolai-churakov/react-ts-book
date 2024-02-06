@@ -1,3 +1,5 @@
+import {Select} from "../components/UI/Select/Select";
+
 export interface BaseSelect {
   text: string;
   value: string;
