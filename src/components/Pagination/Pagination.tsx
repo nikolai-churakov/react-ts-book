@@ -6,34 +6,34 @@ import {RootReducer} from "../../store/rootReducer";
 
 export const Pagination = () => {
 
-    const pageNumber = []
+  const pageNumber = []
 
-    const count: IBookList = useSelector((state: RootReducer) => state.booksItems)
+  const count: IBookList = useSelector((state: RootReducer) => state.booksItems)
 
-    const PaginationIndex = Math.ceil(count.totalBooks / 20);
-    console.log('total page pagination', PaginationIndex)
+  const PaginationIndex = Math.ceil(count.totalBooks / 20);
+  console.log('total page pagination', PaginationIndex)
 
-    for (let i= 1; i <= PaginationIndex; i++) {
-        pageNumber.push(i)
-    }
+  for (let i = 1; i <= PaginationIndex; i++) {
+    pageNumber.push(i)
+  }
 
-    if (count.totalBooks === 0) {
-        return (
-            <div/>
-        );
-    }
-
+  if (count.totalBooks === 0) {
     return (
-            <div className={'pagination'}>
-                {
-                    pageNumber.map(number => (
-                        <div className={'pageItem'} key={number}>
-                            <a href={`1`} className={'pageLink'}>
-                                {number}
-                            </a>
-                        </div>
-                    ))
-                }
-            </div>
-    )
+      <div/>
+    );
+  }
+
+  return (
+    <div className={'pagination'}>
+      {
+        pageNumber.map(number => (
+          <div className={'pageItem'} key={number}>
+            <a href={`1`} className={'pageLink'}>
+              {number}
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  )
 }
